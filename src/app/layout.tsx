@@ -81,9 +81,9 @@ export default function RootLayout({
           </div>
           <div className="flex items-center space-x-4">
             {['facebook', 'twitter', 'linkedin'].map((social) => (
-              <a 
+              <a
                 key={social}
-                href={`#${social}`} 
+                href={`#${social}`}
                 className="w-8 h-8 rounded-full bg-[#1A1A1A] flex items-center justify-center hover:bg-[#FF5912] transition-colors duration-300"
               >
                 <span className="sr-only">{social}</span>
@@ -122,41 +122,39 @@ export default function RootLayout({
                   <div key={index} className="relative group">
                     {item.hasDropdown ? (
                       <div>
-                        <Link 
+                        <Link
                           href={item.href}
-                          className={`text-sm font-medium transition-colors duration-300 py-2 flex items-center gap-1 ${
-                            pathname === item.href || pathname.startsWith(item.href + '/') 
-                              ? 'text-[#FF5912]' 
+                          className={`text-sm font-medium transition-colors duration-300 py-2 flex items-center gap-1 ${pathname === item.href || pathname.startsWith(item.href + '/')
+                              ? 'text-[#FF5912]'
                               : 'text-[#FBF8F3]/80 hover:text-[#FF5912]'
-                          }`}
+                            }`}
                         >
                           {item.label}
                           <svg className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                           </svg>
                         </Link>
-                        
+
                         {/* Dropdown Menu */}
                         <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20">
                           <div className="py-1 mt-2"></div> {/* Invisible gap for hover */}
                           <div className="bg-[#1A1A1A] rounded-xl shadow-xl border border-[#2A2A2A] overflow-hidden">
                             <div className="p-2">
                               {productCategories.map((product, idx) => (
-                                <Link 
-                                  key={idx} 
+                                <Link
+                                  key={idx}
                                   href={product.href}
-                                  className={`block px-4 py-2 text-sm rounded-lg transition-colors duration-200 ${
-                                    pathname === product.href 
-                                      ? 'bg-[#FF5912]/10 text-[#FF5912]' 
+                                  className={`block px-4 py-2 text-sm rounded-lg transition-colors duration-200 ${pathname === product.href
+                                      ? 'bg-[#FF5912]/10 text-[#FF5912]'
                                       : 'text-[#FBF8F3]/80 hover:bg-[#2A2A2A] hover:text-[#FF5912]'
-                                  }`}
+                                    }`}
                                 >
                                   {product.name}
                                 </Link>
                               ))}
                             </div>
                             <div className="p-2 border-t border-[#2A2A2A]">
-                              <Link 
+                              <Link
                                 href={item.href}
                                 className="block px-4 py-2 text-sm text-[#FF5912] font-medium rounded-lg hover:bg-[#2A2A2A] transition-colors duration-200"
                               >
@@ -167,20 +165,19 @@ export default function RootLayout({
                         </div>
                       </div>
                     ) : (
-                      <Link 
+                      <Link
                         href={item.href}
-                        className={`text-sm font-medium transition-colors duration-300 py-2 ${
-                          pathname === item.href 
-                            ? 'text-[#FF5912]' 
+                        className={`text-sm font-medium transition-colors duration-300 py-2 ${pathname === item.href
+                            ? 'text-[#FF5912]'
                             : 'text-[#FBF8F3]/80 hover:text-[#FF5912]'
-                        }`}
+                          }`}
                       >
                         {item.label}
                       </Link>
                     )}
-                    
+
                     {pathname === item.href && !item.hasDropdown && (
-                      <motion.div 
+                      <motion.div
                         layoutId="activeMenuIndicator"
                         className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#FF5912] rounded-full"
                         initial={{ opacity: 0 }}
@@ -188,9 +185,9 @@ export default function RootLayout({
                         transition={{ duration: 0.3 }}
                       />
                     )}
-                    
+
                     {item.hasDropdown && (pathname === item.href || pathname.startsWith(item.href + '/')) && (
-                      <motion.div 
+                      <motion.div
                         layoutId="activeMenuIndicator"
                         className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#FF5912] rounded-full"
                         initial={{ opacity: 0 }}
@@ -206,7 +203,7 @@ export default function RootLayout({
               </div>
 
               {/* Mobile menu button */}
-              <button 
+              <button
                 className="lg:hidden relative z-10"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
@@ -221,7 +218,7 @@ export default function RootLayout({
               {/* Mobile menu */}
               <AnimatePresence>
                 {mobileMenuOpen && (
-                  <motion.div 
+                  <motion.div
                     className="fixed inset-0 bg-[#0A0A0A] z-40 lg:hidden flex flex-col"
                     initial={{ x: '100%' }}
                     animate={{ x: 0 }}
@@ -234,29 +231,28 @@ export default function RootLayout({
                           <div key={index} className="relative">
                             {item.hasDropdown ? (
                               <div>
-                                <button 
-                                  className={`text-2xl font-medium flex items-center justify-between w-full ${
-                                    pathname === item.href || pathname.startsWith(item.href + '/') 
-                                      ? 'text-[#FF5912]' 
+                                <button
+                                  className={`text-2xl font-medium flex items-center justify-between w-full ${pathname === item.href || pathname.startsWith(item.href + '/')
+                                      ? 'text-[#FF5912]'
                                       : 'text-[#FBF8F3]'
-                                  }`}
+                                    }`}
                                   onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
                                 >
                                   {item.label}
-                                  <svg 
-                                    className={`w-6 h-6 transition-transform duration-300 ${mobileProductsOpen ? 'rotate-180' : ''}`} 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    viewBox="0 0 24 24" 
+                                  <svg
+                                    className={`w-6 h-6 transition-transform duration-300 ${mobileProductsOpen ? 'rotate-180' : ''}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                                   </svg>
                                 </button>
-                                
+
                                 <AnimatePresence>
                                   {mobileProductsOpen && (
-                                    <motion.div 
+                                    <motion.div
                                       initial={{ height: 0, opacity: 0 }}
                                       animate={{ height: 'auto', opacity: 1 }}
                                       exit={{ height: 0, opacity: 0 }}
@@ -265,14 +261,13 @@ export default function RootLayout({
                                     >
                                       <div className="space-y-3 border-l-2 border-[#2A2A2A] pl-4">
                                         {productCategories.map((product, idx) => (
-                                          <Link 
-                                            key={idx} 
+                                          <Link
+                                            key={idx}
                                             href={product.href}
-                                            className={`block text-lg ${
-                                              pathname === product.href 
-                                                ? 'text-[#FF5912]' 
+                                            className={`block text-lg ${pathname === product.href
+                                                ? 'text-[#FF5912]'
                                                 : 'text-[#FBF8F3]/80 hover:text-[#FF5912]'
-                                            }`}
+                                              }`}
                                             onClick={() => setMobileMenuOpen(false)}
                                           >
                                             {product.name}
@@ -280,7 +275,7 @@ export default function RootLayout({
                                         ))}
                                       </div>
                                       <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
-                                        <Link 
+                                        <Link
                                           href={item.href}
                                           className="block text-lg text-[#FF5912] font-medium"
                                           onClick={() => setMobileMenuOpen(false)}
@@ -293,13 +288,12 @@ export default function RootLayout({
                                 </AnimatePresence>
                               </div>
                             ) : (
-                              <Link 
+                              <Link
                                 href={item.href}
-                                className={`text-2xl font-medium block ${
-                                  pathname === item.href 
-                                    ? 'text-[#FF5912]' 
+                                className={`text-2xl font-medium block ${pathname === item.href
+                                    ? 'text-[#FF5912]'
                                     : 'text-[#FBF8F3]'
-                                }`}
+                                  }`}
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {item.label}
@@ -308,28 +302,28 @@ export default function RootLayout({
                                 )}
                               </Link>
                             )}
-                            
+
                             {pathname === item.href && !item.hasDropdown && (
                               <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-[#FF5912] rounded-full" />
                             )}
-                            
+
                             {item.hasDropdown && (pathname === item.href || pathname.startsWith(item.href + '/')) && (
                               <span className="absolute -left-4 top-3 w-2 h-2 bg-[#FF5912] rounded-full" />
                             )}
                           </div>
                         ))}
                       </div>
-                      
+
                       <div className="mt-auto">
                         <button className="w-full bg-[#FF5912] text-white px-6 py-3 rounded-full text-lg font-medium my-8">
                           Request Quote
                         </button>
-                        
+
                         <div className="flex items-center space-x-4 justify-center mt-4">
                           {['facebook', 'twitter', 'linkedin'].map((social) => (
-                            <a 
+                            <a
                               key={social}
-                              href={`#${social}`} 
+                              href={`#${social}`}
                               className="w-10 h-10 rounded-full bg-[#1A1A1A] flex items-center justify-center hover:bg-[#FF5912] transition-colors duration-300"
                             >
                               <span className="sr-only">{social}</span>
@@ -347,7 +341,7 @@ export default function RootLayout({
                             </a>
                           ))}
                         </div>
-                        
+
                         <div className="flex flex-col space-y-3 mt-8">
                           <div className="flex items-center space-x-3">
                             <svg className="w-5 h-5 text-[#FF5912]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -390,9 +384,9 @@ export default function RootLayout({
                 </p>
                 <div className="flex space-x-4">
                   {['facebook', 'twitter', 'linkedin', 'instagram'].map((social) => (
-                    <a 
+                    <a
                       key={social}
-                      href={`#${social}`} 
+                      href={`#${social}`}
                       className="w-9 h-9 rounded-full bg-[#1A1A1A] flex items-center justify-center hover:bg-[#FF5912] transition-colors duration-300"
                     >
                       <span className="sr-only">{social}</span>
@@ -435,20 +429,20 @@ export default function RootLayout({
                   ))}
                 </ul>
               </div>
-
-              {/* Products
+              
+              {/* Product Categories */}
               <div>
                 <h3 className="text-lg font-semibold mb-6">Our Products</h3>
                 <ul className="space-y-3">
                   {productCategories.slice(0, 6).map((product, i) => (
                     <li key={i}>
-                      <Link href={`/products/${product.toLowerCase().replace(/\s+/g, '-')}`} className="text-[#FBF8F3]/70 hover:text-[#FF5912] transition-colors duration-300">
-                        {product} Products
+                      <Link href={product.href} className="text-[#FBF8F3]/70 hover:text-[#FF5912] transition-colors duration-300">
+                        {product.name} Products
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </div> */}
+              </div>
 
               {/* Contact Info */}
               <div>
@@ -485,7 +479,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            
+
             <div className="border-t border-[#1A1A1A] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
               <p className="text-[#FBF8F3]/60 text-sm">
                 © {new Date().getFullYear()} Prabhat Steel. All rights reserved.
@@ -503,7 +497,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          </footer>
+        </footer>
       </body>
     </html>
   );
