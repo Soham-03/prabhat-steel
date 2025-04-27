@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useParams } from 'next/navigation';
 
 // Product data for each category
 const productData = {
@@ -155,12 +156,14 @@ const defaultProduct = {
   industries: []
 };
 
-export default function ProductDetailPage({ params }: { params: { category: string } }) {
+export default function ProductDetailPage() {
+  const params = useParams();
+  const category = params.category as string;
+  
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
   const [activeProduct, setActiveProduct] = useState(0);
   
-  const category = params.category;
   const product = productData[category as keyof typeof productData] || defaultProduct;
   const relatedCategoryIds = relatedProducts[category as keyof typeof relatedProducts] || [];
   
