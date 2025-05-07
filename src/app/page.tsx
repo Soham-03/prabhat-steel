@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { tr } from 'framer-motion/client';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -83,10 +84,14 @@ export default function Home() {
               Industry-leading supplier of high-quality stainless steel and alloy products
             </motion.p>
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105">
-                Explore Products
+              <button className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105"
+               onClick={() => window.open('https://wa.me/c/918369657425', '_blank')}
+              >
+                View Catalogue
               </button>
-              <button className="bg-transparent border border-[#FBF8F3] hover:bg-[#FBF8F3]/10 text-white px-8 py-3 rounded-full font-medium transition-all duration-300">
+              <button className="bg-transparent border border-[#FBF8F3] hover:bg-[#FBF8F3]/10 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
+              onClick={()=> window.location.replace("/contact")}
+              >
                 Contact Us
               </button>
             </motion.div>
@@ -357,6 +362,7 @@ export default function Home() {
               className="bg-white text-[#FF5912] px-8 py-3 rounded-full font-medium transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={()=> window.location.replace("/contact")}
             >
               Contact Us Today
             </motion.button>
@@ -364,6 +370,7 @@ export default function Home() {
               className="bg-transparent border border-white text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={()=> window.location.replace("/contact")}
             >
               Request a Quote
             </motion.button>

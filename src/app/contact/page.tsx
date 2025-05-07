@@ -491,6 +491,7 @@ export default function Contact() {
                             className="bg-transparent border border-white text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={()=> window.location.replace("https://wa.me/c/918369657425")}
                         >
                             View Product Catalog
                         </motion.button>
