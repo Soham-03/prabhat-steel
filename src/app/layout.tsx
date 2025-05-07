@@ -58,7 +58,7 @@ export default function RootLayout({
   const socialLinks = {
     'instagram': "https://www.instagram.com/prabhat.steel?igsh=YzJzbTl6MWNhNDJ5",
     'youtube': "https://youtube.com/@prabhatsteel?si=-Pq3xp_B4yl1Bf-D",
-    'linkedin': "#linkedin" // Keeping LinkedIn as is since no link was provided
+    'linkedin': "https://in.linkedin.com/in/prabhatsteel-connect-720151339" // Keeping LinkedIn as is since no link was provided
   };
 
   return (

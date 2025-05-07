@@ -268,7 +268,7 @@ export default function Contact() {
 
                                     {/* LinkedIn */}
                                     <a
-                                        href="#"
+                                        href="https://in.linkedin.com/in/prabhatsteel-connect-720151339"
                                         className="w-10 h-10 bg-[#1A1A1A] rounded-full flex items-center justify-center hover:bg-[#FF5912] transition-colors duration-300"
                                         aria-label="Follow us on LinkedIn"
                                     >
