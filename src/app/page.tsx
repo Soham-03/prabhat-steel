@@ -23,14 +23,14 @@ export default function Home() {
 
   const products = [
     "Stainless Steel Products",
+    "Aluminium Products",
     "Duplex Steel Products",
     "Super Duplex Steel Products",
     "Alloy Steel Products",
-    "Cupro Nickel Products",
+    "Brass-Copper Products",
     "Hastelloy Products",
     "Titanium Products",
     "Monel Products",
-    "Aluminium Products"
   ];
 
   const heroVariants = {

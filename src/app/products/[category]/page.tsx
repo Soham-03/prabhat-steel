@@ -12,7 +12,7 @@ const productData = {
         name: "Stainless Steel",
         title: "Premium Stainless Steel Products",
         description: "Our high-quality stainless steel products offer exceptional corrosion resistance, durability, and aesthetic appeal for a wide range of applications.",
-        image: "/gg.jpg",
+        image: "/stainless_steel.jpg",
         features: [
             "Superior corrosion resistance",
             "Excellent heat resistance",
@@ -34,19 +34,366 @@ const productData = {
                 specifications: ["Thickness: 0.3mm to 100mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: 2B, BA, No.4, No.8, Hairline"],
                 applications: ["Marine environments", "Chemical processing equipment", "Pharmaceutical industry", "Surgical instruments"]
             },
-            // Additional products same as before
+            {
+                name: "SS 321 Sheets",
+                description: "Titanium-stabilized grade with excellent resistance to intergranular corrosion at high temperatures.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1800mm", "Length: Up to 6000mm", "Surface: 2B, BA, No.4"],
+                applications: ["Heat exchangers", "Aircraft exhaust systems", "High-temperature chemical processing", "Furnace parts"]
+            },
+            {
+                name: "SS 410 Sheets",
+                description: "Martensitic stainless steel with good corrosion resistance and high strength after heat treatment.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, BA"],
+                applications: ["Turbine blades", "Valve components", "Cutlery", "Surgical instruments"]
+            }
         ],
         certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM A240", "ASME SA240"],
         industries: ["Automotive", "Aerospace", "Food & Beverage", "Pharmaceutical", "Chemical Processing", "Construction", "Marine"]
     },
-    // other product categories (duplex-steel, etc.) same as before
+    'aluminium': {
+        name: "Aluminium",
+        title: "High-Performance Aluminium Products",
+        description: "Our premium aluminium products combine lightweight properties with excellent corrosion resistance, thermal conductivity, and formability for diverse industrial applications.",
+        image: "/aluminium.jpg",
+        features: [
+            "Exceptional strength-to-weight ratio",
+            "Superior corrosion resistance",
+            "Excellent thermal and electrical conductivity",
+            "High reflectivity",
+            "100% recyclable and sustainable",
+            "Non-magnetic properties"
+        ],
+        products: [
+            {
+                name: "Aluminium 1100 Sheets",
+                description: "Commercially pure aluminium (99% minimum) with excellent formability, corrosion resistance, and weldability.",
+                specifications: ["Thickness: 0.2mm to 50mm", "Width: Up to 2500mm", "Length: Up to 6000mm", "Surface: Mill finish, Anodized, Polished"],
+                applications: ["Food and chemical handling equipment", "Heat exchangers", "Light reflectors", "Decorative applications"]
+            },
+            {
+                name: "Aluminium 5052 Sheets",
+                description: "Aluminium-magnesium alloy with moderate strength and excellent corrosion resistance, particularly in marine environments.",
+                specifications: ["Thickness: 0.2mm to 50mm", "Width: Up to 2500mm", "Length: Up to 6000mm", "Surface: Mill finish, Anodized, Brushed"],
+                applications: ["Marine components", "Aircraft parts", "Pressure vessels", "Electronic chassis"]
+            },
+            {
+                name: "Aluminium 6061 Sheets",
+                description: "Aluminium-magnesium-silicon alloy with good strength, formability, weldability, and corrosion resistance.",
+                specifications: ["Thickness: 0.3mm to 100mm", "Width: Up to 2500mm", "Length: Up to 6000mm", "Surface: Mill finish, Anodized, Polished"],
+                applications: ["Structural components", "Marine applications", "Transportation", "Aerospace industry"]
+            },
+            {
+                name: "Aluminium 7075 Sheets",
+                description: "High-strength aerospace grade with excellent fatigue resistance and good machinability.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: Mill finish"],
+                applications: ["Aircraft structures", "Aerospace components", "High-stress applications", "Defense equipment"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM B209", "EN 573-3"],
+        industries: ["Aerospace", "Automotive", "Construction", "Electronics", "Packaging", "Marine", "Transportation"]
+    },
+    'duplex-steel': {
+        name: "Duplex Steel",
+        title: "Advanced Duplex Steel Solutions",
+        description: "Our duplex steel products offer an optimal balance of strength, corrosion resistance, and ductility through their unique dual-phase microstructure for demanding industrial environments.",
+        image: "/duplex-steel.jpg",
+        features: [
+            "Superior strength compared to austenitic stainless steels",
+            "Excellent resistance to stress corrosion cracking",
+            "High resistance to chloride pitting and crevice corrosion",
+            "Better thermal conductivity than austenitic grades",
+            "Good weldability and formability",
+            "Cost-effective due to lower nickel content"
+        ],
+        products: [
+            {
+                name: "Duplex 2205 Sheets",
+                description: "The most widely used duplex grade with excellent corrosion resistance and roughly twice the yield strength of austenitic stainless steels.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: 2B, No.4, Hairline"],
+                applications: ["Chemical processing vessels", "Oil and gas pipelines", "Desalination plants", "Heat exchangers"]
+            },
+            {
+                name: "Duplex 2304 Sheets",
+                description: "Lean duplex grade with lower nickel content but good corrosion resistance and mechanical properties.",
+                specifications: ["Thickness: 0.5mm to 40mm", "Width: Up to 1800mm", "Length: Up to 6000mm", "Surface: 2B, No.4"],
+                applications: ["Storage tanks", "Water systems", "Architectural applications", "Pulp and paper industry"]
+            },
+            {
+                name: "Duplex S31803 Sheets",
+                description: "Standard duplex grade offering excellent resistance to corrosion in various aggressive environments.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: 2B, No.4, Hairline"],
+                applications: ["Pressure vessels", "Heat exchangers", "Chemical processing equipment", "Offshore oil and gas platforms"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM A240", "ASME SA240", "NORSOK M-630"],
+        industries: ["Oil & Gas", "Chemical Processing", "Pulp & Paper", "Desalination", "Marine", "Mining", "Power Generation"]
+    },
+    'super-duplex-steel': {
+        name: "Super Duplex Steel",
+        title: "Premium Super Duplex Steel Products",
+        description: "Our super duplex steel products deliver exceptional corrosion resistance and superior mechanical properties for the most challenging and aggressive industrial environments.",
+        image: "/super-duplex-steel.jpg",
+        features: [
+            "Outstanding resistance to pitting and crevice corrosion",
+            "Superior chloride stress corrosion cracking resistance",
+            "Excellent strength (approximately twice that of austenitic stainless steels)",
+            "High resistance to erosion and fatigue",
+            "Extended service life in extreme environments",
+            "Reduced maintenance costs in aggressive applications"
+        ],
+        products: [
+            {
+                name: "Super Duplex 2507 Sheets",
+                description: "Premium grade with exceptional corrosion resistance and high strength for the most demanding applications.",
+                specifications: ["Thickness: 0.8mm to 40mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: 2B, No.4"],
+                applications: ["Offshore oil and gas", "Chemical processing in hot acids", "Seawater desalination", "FGD systems"]
+            },
+            {
+                name: "Super Duplex S32750 Sheets",
+                description: "High-performance grade with excellent resistance to pitting, crevice corrosion, and stress corrosion cracking.",
+                specifications: ["Thickness: 0.8mm to 40mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: 2B, No.4, Hairline"],
+                applications: ["Subsea oil and gas equipment", "Heat exchangers in aggressive media", "Chemical process vessels", "Pulp and paper digesters"]
+            },
+            {
+                name: "Super Duplex S32760 Sheets",
+                description: "Enhanced super duplex grade with improved resistance to pitting corrosion in high-chloride environments.",
+                specifications: ["Thickness: 1mm to 30mm", "Width: Up to 1800mm", "Length: Up to 6000mm", "Surface: 2B, No.4"],
+                applications: ["Offshore platforms", "Flue gas scrubbers", "Chemical transport equipment", "High-chloride process streams"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM A240", "ASME SA240", "NORSOK M-630", "DNV GL"],
+        industries: ["Oil & Gas", "Offshore", "Chemical Processing", "Desalination", "Pulp & Paper", "Pollution Control", "Power Generation"]
+    },
+    'alloy-steel': {
+        name: "Alloy Steel",
+        title: "Specialized Alloy Steel Solutions",
+        description: "Our high-performance alloy steel products feature custom compositions engineered for superior strength, heat resistance, and durability in extreme operating conditions.",
+        image: "/alloy-steel.webp",
+        features: [
+            "Enhanced mechanical properties through precise alloying",
+            "Superior performance in high-temperature applications",
+            "Excellent resistance to mechanical fatigue",
+            "Good weldability and formability",
+            "Customizable properties for specific applications",
+            "Extended service life in harsh environments"
+        ],
+        products: [
+            {
+                name: "Alloy 20 Sheets",
+                description: "Nickel-iron-chromium alloy with excellent resistance to sulfuric acid and many other corrosive chemicals.",
+                specifications: ["Thickness: 0.6mm to 50mm", "Width: Up to 1800mm", "Length: Up to 6000mm", "Surface: 2B, BA"],
+                applications: ["Chemical processing equipment", "Pharmaceutical reactors", "Food processing", "Pickling equipment"]
+            },
+            {
+                name: "Incoloy 800 Sheets",
+                description: "Nickel-iron-chromium alloy with exceptional resistance to high-temperature oxidation and carburization.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, BA"],
+                applications: ["Heat treatment equipment", "Chemical and petrochemical processing", "Power generation", "Nuclear applications"]
+            },
+            {
+                name: "Inconel 600 Sheets",
+                description: "Nickel-chromium alloy with excellent resistance to oxidation and corrosion at elevated temperatures.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, BA"],
+                applications: ["Gas turbine components", "Heat treatment fixtures", "Chemical processing", "Nuclear engineering"]
+            },
+            {
+                name: "P91/T91 Alloy Sheets",
+                description: "High-strength ferritic/martensitic steel with excellent creep resistance at elevated temperatures.",
+                specifications: ["Thickness: 1mm to 50mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: Hot-rolled, Cold-rolled"],
+                applications: ["Power plants", "Boiler components", "Steam pipes", "Heat exchangers"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM A240", "ASME SA240", "NACE MR0175/ISO 15156"],
+        industries: ["Power Generation", "Chemical Processing", "Oil & Gas", "Aerospace", "Heat Treatment", "Automotive", "Nuclear"]
+    },
+    'brass-copper': {
+        name: "Brass & Copper",
+        title: "Premium Brass & Copper Products",
+        description: "Our high-quality brass and copper products combine excellent thermal and electrical conductivity with corrosion resistance for applications ranging from plumbing to electrical systems.",
+        image: "/brass-copper.webp",
+        features: [
+            "Exceptional thermal and electrical conductivity",
+            "Excellent corrosion resistance, particularly in seawater",
+            "Antimicrobial properties",
+            "Good machinability and formability",
+            "Attractive appearance with various finish options",
+            "Long service life with minimal maintenance"
+        ],
+        products: [
+            {
+                name: "Copper C11000 Sheets",
+                description: "Commercially pure copper (99.9%) with excellent electrical and thermal conductivity.",
+                specifications: ["Thickness: 0.2mm to 50mm", "Width: Up to 2000mm", "Length: Up to 6000mm", "Surface: Bright, Matte"],
+                applications: ["Electrical conductors", "Heat exchangers", "Roofing and flashing", "Decorative architectural elements"]
+            },
+            {
+                name: "Brass C26000 Sheets",
+                description: "70/30 brass with good strength, formability, and machinability.",
+                specifications: ["Thickness: 0.3mm to 40mm", "Width: Up to 1800mm", "Length: Up to 6000mm", "Surface: Polished, Brushed"],
+                applications: ["Fasteners", "Plumbing components", "Electrical connectors", "Decorative hardware"]
+            },
+            {
+                name: "Cupronickel 70/30 Sheets",
+                description: "70% copper, 30% nickel alloy with outstanding resistance to seawater corrosion and biofouling.",
+                specifications: ["Thickness: 0.5mm to 30mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: Bright finish"],
+                applications: ["Marine condensers", "Seawater piping systems", "Desalination plants", "Heat exchangers"]
+            },
+            {
+                name: "Cupronickel 90/10 Sheets",
+                description: "90% copper, 10% nickel alloy with excellent resistance to erosion-corrosion in flowing seawater.",
+                specifications: ["Thickness: 0.5mm to 30mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: Bright finish"],
+                applications: ["Marine equipment", "Ship hulls", "Offshore platforms", "Heat exchangers"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM B152", "ASTM B171", "JIS H3100"],
+        industries: ["Marine", "Electrical", "Plumbing", "HVAC", "Architecture", "Renewable Energy", "Desalination"]
+    },
+    'hastelloy': {
+        name: "Hastelloy",
+        title: "Premium Hastelloy Corrosion-Resistant Alloys",
+        description: "Our Hastelloy products provide industry-leading corrosion resistance for the most aggressive chemical environments, ensuring reliability in extreme operating conditions.",
+        image: "/hastealloy.jpg",
+        features: [
+            "Outstanding resistance to pitting and crevice corrosion",
+            "Exceptional performance in oxidizing and reducing environments",
+            "Excellent resistance to stress-corrosion cracking",
+            "Superior high-temperature strength and stability",
+            "Resistant to chloride-induced attack",
+            "Extended service life in extreme chemical environments"
+        ],
+        products: [
+            {
+                name: "Hastelloy C276 Sheets",
+                description: "Versatile nickel-molybdenum-chromium alloy with outstanding resistance to a wide range of aggressive chemicals.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, Bright Annealed"],
+                applications: ["Chemical processing equipment", "FGD systems", "Waste treatment", "Pulp and paper production"]
+            },
+            {
+                name: "Hastelloy C22 Sheets",
+                description: "Enhanced version of C276 with improved resistance to oxidizing media and better fabricability.",
+                specifications: ["Thickness: 0.5mm to 40mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, Bright Annealed"],
+                applications: ["Pharmaceutical equipment", "Chemical processing", "Pollution control", "Marine applications"]
+            },
+            {
+                name: "Hastelloy B2 Sheets",
+                description: "Nickel-molybdenum alloy with exceptional resistance to hydrochloric acid and other reducing environments.",
+                specifications: ["Thickness: 0.5mm to 30mm", "Width: Up to 1300mm", "Length: Up to 6000mm", "Surface: 2B, Bright Annealed"],
+                applications: ["Hydrochloric acid processing", "Chloride processing equipment", "Chemical reactors", "Heat exchangers"]
+            },
+            {
+                name: "Hastelloy X Sheets",
+                description: "Nickel-chromium-iron-molybdenum alloy with exceptional oxidation resistance at high temperatures.",
+                specifications: ["Thickness: 0.5mm to 30mm", "Width: Up to 1300mm", "Length: Up to 6000mm", "Surface: 2B, Bright Annealed"],
+                applications: ["Gas turbine components", "Industrial furnaces", "Petrochemical processing", "Nuclear reactors"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM B575", "ASME SB575", "NACE MR0175/ISO 15156"],
+        industries: ["Chemical Processing", "Pharmaceutical", "Oil & Gas", "Waste Treatment", "Power Generation", "Pulp & Paper", "Aerospace"]
+    },
+    'titanium': {
+        name: "Titanium",
+        title: "High-Performance Titanium Products",
+        description: "Our premium titanium products combine unmatched strength-to-weight ratio with exceptional corrosion resistance for critical applications in aerospace, medical, and chemical processing sectors.",
+        image: "/titanium.jpg",
+        features: [
+            "Exceptional strength-to-weight ratio",
+            "Superior corrosion resistance in aggressive environments",
+            "Excellent biocompatibility",
+            "High temperature capability up to 600°C",
+            "Non-magnetic properties",
+            "Outstanding fatigue performance"
+        ],
+        products: [
+            {
+                name: "Titanium Gr 1 Sheets",
+                description: "Commercially pure titanium with excellent formability and corrosion resistance.",
+                specifications: ["Thickness: 0.5mm to 25mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: Mill finish, Pickled"],
+                applications: ["Chemical processing equipment", "Desalination plants", "Heat exchangers", "Medical implants"]
+            },
+            {
+                name: "Titanium Gr 2 Sheets",
+                description: "Commercially pure grade with higher strength than Grade 1, maintaining excellent corrosion resistance.",
+                specifications: ["Thickness: 0.5mm to 25mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: Mill finish, Pickled"],
+                applications: ["Chemical processing", "Marine applications", "Pulp and paper production", "Electrochemical applications"]
+            },
+            {
+                name: "Titanium Gr 5 Sheets",
+                description: "Ti-6Al-4V alloy with high strength, light weight, and good corrosion resistance.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: Mill finish, Pickled"],
+                applications: ["Aerospace components", "Medical implants", "Automotive parts", "Sports equipment"]
+            },
+            {
+                name: "Titanium Gr 7 Sheets",
+                description: "Pd-stabilized grade with exceptional resistance to crevice corrosion in reducing acids and chlorides.",
+                specifications: ["Thickness: 0.5mm to 20mm", "Width: Up to 1200mm", "Length: Up to 6000mm", "Surface: Mill finish, Pickled"],
+                applications: ["Chemical processing equipment", "Chlorine dioxide generators", "Hydrometallurgical equipment", "Offshore oil and gas"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM B265", "ASME SB265", "AMS 4911"],
+        industries: ["Aerospace", "Medical", "Chemical Processing", "Oil & Gas", "Marine", "Automotive", "Sports & Recreation"]
+    },
+    'monel-products': {
+        name: "Monel Products",
+        title: "Premium Monel Nickel-Copper Alloys",
+        description: "Our high-quality Monel products offer superior corrosion resistance in acidic and alkaline environments, coupled with excellent mechanical properties across a wide temperature range.",
+        image: "/monel.jpg",
+        features: [
+            "Exceptional resistance to seawater and steam at high temperatures",
+            "Excellent resistance to alkalis and many acids",
+            "Good mechanical properties across a wide temperature range",
+            "Superior resistance to stress corrosion cracking",
+            "Good weldability and fabricability",
+            "Maintains strength in sub-zero temperatures"
+        ],
+        products: [
+            {
+                name: "Monel 400 Sheets",
+                description: "Standard nickel-copper alloy with excellent corrosion resistance in reducing environments.",
+                specifications: ["Thickness: 0.5mm to 50mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, Bright Annealed"],
+                applications: ["Marine applications", "Chemical processing", "Petroleum refining", "Valves and pumps"]
+            },
+            {
+                name: "Monel K500 Sheets",
+                description: "Age-hardenable version of Monel 400 with increased strength while maintaining excellent corrosion resistance.",
+                specifications: ["Thickness: 0.5mm to 40mm", "Width: Up to 1500mm", "Length: Up to 6000mm", "Surface: 2B, Bright Annealed"],
+                applications: ["Pump shafts", "Oil well components", "Marine propeller shafts", "Valve components"]
+            },
+            {
+                name: "Monel R-405 Sheets",
+                description: "Free-machining version of Monel 400 with added sulfur for improved machinability.",
+                specifications: ["Thickness: 0.5mm to 30mm", "Width: Up to 1300mm", "Length: Up to 6000mm", "Surface: 2B"],
+                applications: ["High-precision machined parts", "Valve components", "Pump components", "Fasteners"]
+            },
+            {
+                name: "Monel 401 Sheets",
+                description: "Low-carbon variant with enhanced weldability and resistance to carbide precipitation.",
+                specifications: ["Thickness: 0.5mm to 25mm", "Width: Up to 1300mm", "Length: Up to 6000mm", "Surface: 2B"],
+                applications: ["Heat exchangers", "Process vessels", "Feedwater heaters", "Marine equipment"]
+            }
+        ],
+        certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM B127", "ASME SB127", "NACE MR0175/ISO 15156"],
+        industries: ["Oil & Gas", "Marine", "Chemical Processing", "Power Generation", "Aerospace", "Water Treatment", "Food Processing"]
+    }
 };
 
-// Related products mapping (same as before)
+// Related products mapping
 const relatedProducts = {
     'stainless-steel': ['duplex-steel', 'super-duplex-steel', 'alloy-steel'],
-    // other relationships same as before
+    'aluminium': ['titanium', 'stainless-steel', 'brass-copper'],
+    'duplex-steel': ['super-duplex-steel', 'stainless-steel', 'alloy-steel'],
+    'super-duplex-steel': ['duplex-steel', 'hastelloy', 'titanium'],
+    'alloy-steel': ['stainless-steel', 'hastelloy', 'monel-products'],
+    'brass-copper': ['aluminium', 'monel-products', 'stainless-steel'],
+    'hastelloy': ['super-duplex-steel', 'monel-products', 'titanium'],
+    'titanium': ['super-duplex-steel', 'hastelloy', 'aluminium'],
+    'monel-products': ['hastelloy', 'brass-copper', 'alloy-steel']
 };
+
+// // Related products mapping (same as before)
+// const relatedProducts = {
+//     'stainless-steel': ['duplex-steel', 'super-duplex-steel', 'alloy-steel'],
+//     // other relationships same as before
+// };
 
 // Default product data for fallback (same as before)
 const defaultProduct = {
