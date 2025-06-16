@@ -453,7 +453,7 @@ const productData = {
         name: "MS & GI Coated Products",
         title: "Mild Steel & Galvanized Iron Solutions",
         description: "Our comprehensive range of mild steel and galvanized iron products provides cost-effective solutions with excellent strength and corrosion protection for various applications.",
-        image: "/ms_gi_products.jpg",
+        image: "/ms_and_gi.jpg",
         features: [
             "Cost-effective material solutions",
             "Excellent strength and durability",
@@ -955,7 +955,7 @@ const productData = {
                 name: "Hastelloy",
                 title: "Premium Hastelloy Superalloy Products",
                 description: "Our high-performance Hastelloy products deliver exceptional corrosion resistance and high-temperature strength for the most demanding chemical processing and aerospace applications.",
-                image: "/hastelloy.jpg",
+                image: "/hastealloy.jpg",
                 features: [
                     "Outstanding resistance to oxidizing and reducing environments",
                     "Exceptional high-temperature strength and stability",

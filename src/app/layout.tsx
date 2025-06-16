@@ -11,16 +11,28 @@ import { usePathname } from 'next/navigation';
 const inter = Inter({ subsets: ['latin'] });
 
 // Product categories for dropdown
+// const productCategories = [
+//   { name: "Stainless Steel", href: "/products/stainless-steel" },
+//   { name: "Aluminium", href: "/products/aluminium" },
+//   { name: "Duplex Steel", href: "/products/duplex-steel" },
+//   { name: "Super Duplex Steel", href: "/products/super-duplex-steel" },
+//   { name: "Alloy Steel", href: "/products/alloy-steel" },
+//   { name: "Brass and Copper", href: "/products/brass-copper" },
+//   { name: "Hastelloy", href: "/products/hastelloy" },
+//   { name: "Titanium", href: "/products/titanium" },
+//   { name: "Monel Products", href: "/products/monel-products" },
+// ];
 const productCategories = [
   { name: "Stainless Steel", href: "/products/stainless-steel" },
+  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" },
   { name: "Aluminium", href: "/products/aluminium" },
   { name: "Duplex Steel", href: "/products/duplex-steel" },
   { name: "Super Duplex Steel", href: "/products/super-duplex-steel" },
   { name: "Alloy Steel", href: "/products/alloy-steel" },
-  { name: "Brass and Copper", href: "/products/brass-copper" },
-  { name: "Hastelloy", href: "/products/hastelloy" },
-  { name: "Titanium", href: "/products/titanium" },
-  { name: "Monel Products", href: "/products/monel-products" },
+  { name: "Brass & Copper", href: "/products/brass-copper" },
+  { name: "Carbon Steel", href: "/products/carbon-steel" },
+  { name: "Tool Steel", href: "/products/tool-steel" },
+  { name: "Hastelloy", href: "/products/hastelloy" }
 ];
 
 export default function RootLayout({

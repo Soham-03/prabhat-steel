@@ -6,6 +6,73 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 // Product categories
+// const productCategories = [
+//   {
+//     id: "stainless-steel",
+//     name: "Stainless Steel",
+//     image: "/stainless_steel.jpg",
+//     description: "High-quality stainless steel products with excellent corrosion resistance and durability.",
+//     popular: ["SS 304/304L Sheets", "SS 316/316L Sheets", "SS 321 Sheets", "SS 410 Sheets"]
+//   },
+//   {
+//     id: "aluminium",
+//     name: "Aluminium",
+//     image: "/aluminium.jpg",
+//     description: "Lightweight, highly recyclable material with good corrosion resistance for various applications.",
+//     popular: ["Aluminium 1100 Sheets", "Aluminium 5052 Sheets", "Aluminium 6061 Sheets"]
+//   },
+//   {
+//     id: "duplex-steel",
+//     name: "Duplex Steel",
+//     image: "/duplex-steel.jpg",
+//     description: "Superior strength and corrosion resistance for demanding industrial applications.",
+//     popular: ["Duplex 2205 Sheets", "Duplex 2304 Sheets", "Duplex S31803 Sheets"]
+//   },
+//   {
+//     id: "super-duplex-steel",
+//     name: "Super Duplex Steel",
+//     image: "/super-duplex-steel.jpg",
+//     description: "Enhanced performance in extreme environments with excellent resistance to pitting and crevice corrosion.",
+//     popular: ["Super Duplex 2507 Sheets", "Super Duplex S32750 Sheets"]
+//   },
+//   {
+//     id: "alloy-steel",
+//     name: "Alloy Steel",
+//     image: "/alloy-steel.webp",
+//     description: "Specialized alloy compositions for high-temperature and high-pressure applications.",
+//     popular: ["Alloy 20 Sheets", "Incoloy 800 Sheets", "Inconel 600 Sheets"]
+//   },
+//   {
+//     id: "brass-copper",
+//     name: "Brass & Copper",
+//     image: "/brass-copper.webp",
+//     description: "Excellent resistance to seawater corrosion and biofouling for marine applications.",
+//     popular: ["Cupronickel 70/30 Sheets", "Cupronickel 90/10 Sheets"]
+//   },
+//   {
+//     id: "hastelloy",
+//     name: "Hastelloy",
+//     image: "/hastealloy.jpg",
+//     description: "Superior resistance to highly corrosive environments in chemical processing industries.",
+//     popular: ["Hastelloy C276 Sheets", "Hastelloy C22 Sheets", "Hastelloy B2 Sheets"]
+//   },
+//   {
+//     id: "titanium",
+//     name: "Titanium",
+//     image: "/titanium.jpg",
+//     description: "Exceptional strength-to-weight ratio and corrosion resistance for aerospace and medical applications.",
+//     popular: ["Titanium Gr 1 Sheets", "Titanium Gr 2 Sheets", "Titanium Gr 5 Sheets"]
+//   },
+//   {
+//     id: "monel-products",
+//     name: "Monel Products",
+//     image: "/monel.jpg",
+//     description: "Excellent resistance to acids and alkalis with high tensile strength for harsh environments.",
+//     popular: ["Monel 400 Sheets", "Monel K500 Sheets"]
+//   }
+// ];
+
+
 const productCategories = [
   {
     id: "stainless-steel",
@@ -13,6 +80,13 @@ const productCategories = [
     image: "/stainless_steel.jpg",
     description: "High-quality stainless steel products with excellent corrosion resistance and durability.",
     popular: ["SS 304/304L Sheets", "SS 316/316L Sheets", "SS 321 Sheets", "SS 410 Sheets"]
+  },
+  {
+    id: "ms-gi-coated",
+    name: "MS & GI Coated Products",
+    image: "/ms_and_gi.jpg",
+    description: "Cost-effective mild steel and galvanized iron solutions with excellent strength and corrosion protection.",
+    popular: ["MS Sheets & Plates", "GI Sheets & Coils", "MS Pipes & Tubes", "GI Pipes & Fittings"]
   },
   {
     id: "aluminium",
@@ -33,7 +107,7 @@ const productCategories = [
     name: "Super Duplex Steel",
     image: "/super-duplex-steel.jpg",
     description: "Enhanced performance in extreme environments with excellent resistance to pitting and crevice corrosion.",
-    popular: ["Super Duplex 2507 Sheets", "Super Duplex S32750 Sheets"]
+    popular: ["Super Duplex 2507 Sheets", "Super Duplex S32750 Sheets", "Super Duplex S32760 Sheets"]
   },
   {
     id: "alloy-steel",
@@ -46,32 +120,31 @@ const productCategories = [
     id: "brass-copper",
     name: "Brass & Copper",
     image: "/brass-copper.webp",
-    description: "Excellent resistance to seawater corrosion and biofouling for marine applications.",
-    popular: ["Cupronickel 70/30 Sheets", "Cupronickel 90/10 Sheets"]
+    description: "Excellent thermal and electrical conductivity with corrosion resistance for marine and electrical applications.",
+    popular: ["Copper C11000 Sheets", "Brass C26000 Sheets", "Cupronickel 70/30 Sheets", "Cupronickel 90/10 Sheets"]
+  },
+  {
+    id: "carbon-steel",
+    name: "Carbon Steel",
+    image: "/carbon-steel.jpg",
+    description: "High-strength, cost-effective carbon steel products for structural and general engineering applications.",
+    popular: ["Low Carbon Steel Sheets", "Medium Carbon Steel Sheets", "Carbon Steel Pipes", "Carbon Steel Plates"]
+  },
+  {
+    id: "tool-steel",
+    name: "Tool Steel",
+    image: "/tool-steel.jpg",
+    description: "Premium tool steel with superior hardness and wear resistance for cutting tools and precision manufacturing.",
+    popular: ["D2 Tool Steel", "H13 Tool Steel", "O1 Tool Steel", "A2 Tool Steel"]
   },
   {
     id: "hastelloy",
     name: "Hastelloy",
     image: "/hastealloy.jpg",
     description: "Superior resistance to highly corrosive environments in chemical processing industries.",
-    popular: ["Hastelloy C276 Sheets", "Hastelloy C22 Sheets", "Hastelloy B2 Sheets"]
-  },
-  {
-    id: "titanium",
-    name: "Titanium",
-    image: "/titanium.jpg",
-    description: "Exceptional strength-to-weight ratio and corrosion resistance for aerospace and medical applications.",
-    popular: ["Titanium Gr 1 Sheets", "Titanium Gr 2 Sheets", "Titanium Gr 5 Sheets"]
-  },
-  {
-    id: "monel-products",
-    name: "Monel Products",
-    image: "/monel.jpg",
-    description: "Excellent resistance to acids and alkalis with high tensile strength for harsh environments.",
-    popular: ["Monel 400 Sheets", "Monel K500 Sheets"]
+    popular: ["Hastelloy C-276 Sheets", "Hastelloy C-22 Sheets", "Hastelloy B-3 Sheets"]
   }
 ];
-
 // Industries served
 const industries = [
   { name: "Oil & Gas", icon: "🛢️" },
