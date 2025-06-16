@@ -63,7 +63,7 @@ export default function RootLayout({
     { label: "ABOUT", href: "/about" },
     { label: "PRODUCTS", href: "/products", hasDropdown: true },
     { label: "SERVICES", href: "/services" },
-    { label: "QUALITY", href: "/quality" },
+    // { label: "QUALITY", href: "/quality" },
     { label: "CONTACT", href: "/contact" },
   ];
 
@@ -214,9 +214,9 @@ export default function RootLayout({
                     )}
                   </div>
                 ))}
-                <button className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300">
+                {/* <button className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300">
                   Request Quote
-                </button>
+                </button> */}
               </div>
 
               {/* Mobile menu button */}
