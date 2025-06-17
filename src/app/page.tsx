@@ -4,10 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { tr } from 'framer-motion/client';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,15 +24,76 @@ export default function Home() {
   }, []);
 
   const products = [
-    "Stainless Steel Products",
-    "Aluminium Products",
-    "Duplex Steel Products",
-    "Super Duplex Steel Products",
-    "Alloy Steel Products",
-    "Brass-Copper Products",
-    "Hastelloy Products",
-    "Titanium Products",
-    "Monel Products",
+    {
+      name: "Stainless Steel Products",
+      slug: "stainless-steel",
+      image: "/stainless_steel.jpg",
+      description: "Superior corrosion resistance and durability for demanding applications",
+      features: ["304/316 Grades", "Food Grade", "Corrosion Resistant"]
+    },
+    {
+      name: "MS & GI Coated Products", 
+      slug: "ms-gi-coated",
+      image: "/ms_and_gi.jpg",
+      description: "Cost-effective solutions with excellent strength and coating protection",
+      features: ["Galvanized Coating", "Structural Grade", "Weather Resistant"]
+    },
+    {
+      name: "Aluminium Products",
+      slug: "aluminium", 
+      image: "/aluminium.jpg",
+      description: "Lightweight yet strong with excellent thermal conductivity",
+      features: ["Lightweight", "Conductive", "Aerospace Grade"]
+    },
+    {
+      name: "Duplex Steel Products",
+      slug: "duplex-steel",
+      image: "/duplex-steel.jpg", 
+      description: "Balanced strength and corrosion resistance for demanding environments",
+      features: ["High Strength", "Chloride Resistant", "Stress Corrosion Resistant"]
+    },
+    {
+      name: "Super Duplex Steel Products",
+      slug: "super-duplex-steel",
+      image: "/super-duplex-steel.jpg",
+      description: "Premium performance for the most challenging applications",
+      features: ["Ultra High Strength", "Offshore Grade", "Extreme Corrosion Resistance"]
+    },
+    {
+      name: "Alloy Steel Products",
+      slug: "alloy-steel", 
+      image: "/alloy-steel.webp",
+      description: "Specialized compositions for enhanced mechanical properties",
+      features: ["Heat Resistant", "High Temperature", "Custom Alloys"]
+    },
+    {
+      name: "Brass & Copper Products",
+      slug: "brass-copper",
+      image: "/brass-copper.webp",
+      description: "Excellent conductivity and antimicrobial properties",
+      features: ["Electrical Grade", "Marine Grade", "Antimicrobial"]
+    },
+    {
+      name: "Carbon Steel Products",
+      slug: "carbon-steel",
+      image: "/carbon-steel.jpg", 
+      description: "Versatile and cost-effective for structural applications",
+      features: ["Structural Grade", "Weldable", "High Strength"]
+    },
+    {
+      name: "Tool Steel Products",
+      slug: "tool-steel",
+      image: "/tool-steel.jpg",
+      description: "Precision engineering for cutting tools and dies",
+      features: ["Hardened Grade", "Wear Resistant", "Precision Machined"]
+    },
+    {
+      name: "Hastelloy Products",
+      slug: "hastelloy",
+      image: "/hastealloy.jpg",
+      description: "Superior performance in extreme chemical environments",
+      features: ["Chemical Resistant", "High Temperature", "Aerospace Grade"]
+    }
   ];
 
   const heroVariants = {
@@ -52,6 +114,10 @@ export default function Home() {
       opacity: 1,
       transition: { duration: 0.5 }
     }
+  };
+
+  const handleProductClick = (slug: string) => {
+    router.push(`/products/${slug}`);
   };
 
   return (
@@ -202,31 +268,67 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.map((product, index) => (
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
+                transition={{ duration: 0.5, delay: 0.05 * index }}
                 viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ y: -10 }}
-                className="bg-[#1A1A1A] rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,89,18,0.15)]"
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="bg-[#1A1A1A] rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,89,18,0.15)] cursor-pointer"
+                onClick={() => handleProductClick(product.slug)}
               >
-                <div className="h-48 bg-gradient-to-r from-[#FF5912] to-[#FF8C12] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black opacity-30"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">{product.split(' ')[0]}</span>
+                {/* Product Image */}
+                <div className="h-48 relative overflow-hidden">
+                  <Image 
+                    src={product.image}
+                    width={400}
+                    height={200}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  
+                  {/* Product number overlay */}
+                  <div className="absolute top-4 left-4">
+                    <span className="text-[#FF5912] text-2xl font-bold bg-black/50 rounded-full w-10 h-10 flex items-center justify-center">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  
+                  {/* Arrow icon */}
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-[#FF5912]/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
+                
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{product}</h3>
-                  <p className="text-[#FBF8F3]/60 mb-6">
-                    High-quality {product.toLowerCase()} engineered for optimal performance and longevity.
+                  <h3 className="text-lg font-bold mb-3 leading-tight">{product.name}</h3>
+                  <p className="text-[#FBF8F3]/60 mb-4 text-sm leading-relaxed">
+                    {product.description}
                   </p>
+                  
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {product.features.map((feature, idx) => (
+                      <span 
+                        key={idx}
+                        className="px-2 py-1 bg-[#FF5912]/10 text-[#FF5912] rounded-full text-xs font-medium"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  
                   <div className="flex justify-between items-center">
-                    <button className="text-[#FF5912] font-medium hover:underline flex items-center gap-2">
-                      Learn More
+                    <button className="text-[#FF5912] font-medium hover:underline flex items-center gap-2 text-sm">
+                      Explore Products
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                       </svg>
@@ -236,6 +338,25 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          
+          {/* View All Products Button */}
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <button 
+              onClick={() => router.push('/products')}
+              className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 inline-flex items-center gap-2"
+            >
+              View All Products
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -296,6 +417,7 @@ export default function Home() {
                 transition={{ duration: 0.4, delay: 1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
+                onClick={() => router.push('/about')}
               >
                 Learn About Our Process
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

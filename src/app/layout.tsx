@@ -428,9 +428,10 @@ export default function RootLayout({
                 <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul className="space-y-3">
                   {[
+                    { label: "Home", href: "/"},
                     { label: "About Us", href: "/about" },
                     { label: "Our Products", href: "/products" },
-                    { label: "Quality Control", href: "/quality" },
+                    { label: "Serivces", href: "/services" },
                     { label: "Contact Us", href: "/contact" }
                   ].map((link, i) => (
                     <li key={i}>
@@ -445,8 +446,8 @@ export default function RootLayout({
               {/* Product Categories */}
               <div>
                 <h3 className="text-lg font-semibold mb-6">Our Products</h3>
-                <ul className="space-y-3">
-                  {productCategories.slice(0, 6).map((product, i) => (
+                <ul className="space-y-2">
+                  {productCategories.map((product, i) => (
                     <li key={i}>
                       <Link href={product.href} className="text-[#FBF8F3]/70 hover:text-[#FF5912] transition-colors duration-300">
                         {product.name} Products
@@ -496,7 +497,7 @@ export default function RootLayout({
               <p className="text-[#FBF8F3]/60 text-sm">
                 © {new Date().getFullYear()} Prabhat Steel. All rights reserved.
               </p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
+              {/* <div className="flex space-x-6 mt-4 md:mt-0">
                 <Link href="/privacy-policy" className="text-[#FBF8F3]/60 hover:text-[#FF5912] text-sm transition-colors duration-300">
                   Privacy Policy
                 </Link>
@@ -506,7 +507,7 @@ export default function RootLayout({
                 <Link href="/sitemap" className="text-[#FBF8F3]/60 hover:text-[#FF5912] text-sm transition-colors duration-300">
                   Sitemap
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </footer>

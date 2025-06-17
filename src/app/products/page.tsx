@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 // Product categories
 // const productCategories = [
@@ -71,7 +72,6 @@ import { motion } from 'framer-motion';
 //     popular: ["Monel 400 Sheets", "Monel K500 Sheets"]
 //   }
 // ];
-
 
 const productCategories = [
   {
@@ -165,22 +165,22 @@ export default function ProductsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-  
+  const router = useRouter();
   useEffect(() => {
     // Simulate loading delay
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 600);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
   // Filter products based on search and active filter
   const filteredProducts = productCategories.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                        product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                        product.popular.some(item => item.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.popular.some(item => item.toLowerCase().includes(searchQuery.toLowerCase()));
+
     if (activeFilter) {
       // For demo purposes, we're matching industries to products simplistically
       const industryMatches: Record<string, string[]> = {
@@ -191,21 +191,21 @@ export default function ProductsPage() {
         "Aerospace": ["titanium", "alloy-steel"],
         // Add more industry matches as needed
       };
-      
+
       const matches = industryMatches[activeFilter];
       if (matches) {
         return matchesSearch && matches.includes(product.id);
       }
       return false;
     }
-    
+
     return matchesSearch;
   });
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
     }
@@ -238,7 +238,7 @@ export default function ProductsPage() {
             {productCategories.slice(0, 9).map((category, index) => (
               <div key={index} className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#121212]/70"></div>
-                <Image 
+                <Image
                   src={category.image}
                   alt={category.name}
                   fill
@@ -249,9 +249,9 @@ export default function ProductsPage() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A]/80 to-[#0A0A0A]"></div>
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -263,7 +263,7 @@ export default function ProductsPage() {
             <p className="text-xl text-[#FBF8F3]/80 mb-8">
               Explore our extensive range of high-quality metal products designed for exceptional performance across various industries.
             </p>
-            
+
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto mb-8">
               <input
@@ -273,40 +273,38 @@ export default function ProductsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-[#1A1A1A] border border-[#2A2A2A] rounded-full py-3 px-6 text-[#FBF8F3] placeholder-[#FBF8F3]/50 focus:outline-none focus:ring-2 focus:ring-[#FF5912] transition-all duration-300"
               />
-              <svg 
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#FBF8F3]/50" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24" 
+              <svg
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#FBF8F3]/50"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
             </div>
-            
+
             {/* Industry Filters */}
             <div className="py-4 overflow-x-auto">
               <div className="flex flex-wrap justify-center gap-3 mb-2">
-                <button 
+                <button
                   onClick={() => setActiveFilter(null)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === null 
-                      ? 'bg-[#FF5912] text-white' 
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === null
+                      ? 'bg-[#FF5912] text-white'
                       : 'bg-[#2A2A2A] text-[#FBF8F3]/80 hover:bg-[#FF5912]/20'
-                  }`}
+                    }`}
                 >
                   All Industries
                 </button>
-                
+
                 {industries.slice(0, 8).map((industry, index) => (
-                  <button 
+                  <button
                     key={index}
                     onClick={() => setActiveFilter(industry.name)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      activeFilter === industry.name 
-                        ? 'bg-[#FF5912] text-white' 
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === industry.name
+                        ? 'bg-[#FF5912] text-white'
                         : 'bg-[#2A2A2A] text-[#FBF8F3]/80 hover:bg-[#FF5912]/20'
-                    }`}
+                      }`}
                   >
                     <span className="mr-2">{industry.icon}</span>
                     {industry.name}
@@ -322,7 +320,7 @@ export default function ProductsPage() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           {filteredProducts.length > 0 ? (
-            <motion.div 
+            <motion.div
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
@@ -337,7 +335,7 @@ export default function ProductsPage() {
                 >
                   <Link href={`/products/${product.id}`}>
                     <div className="h-48 relative overflow-hidden">
-                      <Image 
+                      <Image
                         src={product.image}
                         alt={product.name}
                         fill
@@ -350,7 +348,7 @@ export default function ProductsPage() {
                       <p className="text-[#FBF8F3]/70 text-sm mb-4">
                         {product.description}
                       </p>
-                      
+
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-[#FF5912] mb-2">Popular Products:</h4>
                         <ul className="space-y-1">
@@ -367,15 +365,15 @@ export default function ProductsPage() {
                           )}
                         </ul>
                       </div>
-                      
+
                       <div className="flex justify-between items-center">
                         <span className="text-[#FF5912] font-medium hover:underline group flex items-center gap-1">
                           View Details
-                          <svg 
-                            className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24" 
+                          <svg
+                            className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -401,7 +399,7 @@ export default function ProductsPage() {
               <p className="text-[#FBF8F3]/70 mb-6">
                 No products match your current search criteria. Try adjusting your search or filters.
               </p>
-              <button 
+              <button
                 onClick={() => {
                   setSearchQuery("");
                   setActiveFilter(null);
@@ -426,10 +424,10 @@ export default function ProductsPage() {
               Our premium metal products are designed to meet the demanding requirements of a wide range of industries.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {industries.map((industry, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +457,7 @@ export default function ProductsPage() {
               <p className="text-[#FBF8F3]/80 mb-8">
                 We are committed to providing the highest quality metal products backed by exceptional customer service and technical expertise.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
@@ -499,7 +497,7 @@ export default function ProductsPage() {
                     )
                   }
                 ].map((feature, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -516,18 +514,18 @@ export default function ProductsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <div className="relative rounded-3xl overflow-hidden">
-                <Image 
-                  src="/hero.jpg" 
-                  width={600} 
+                <Image
+                  src="/hero.jpg"
+                  width={600}
                   height={500}
                   alt="Our manufacturing facility"
                   className="w-full object-cover rounded-3xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/30 to-transparent rounded-3xl"></div>
-                
+
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="grid grid-cols-3 gap-4 text-center">
                     {[
@@ -543,7 +541,7 @@ export default function ProductsPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-6 mt-6">
                 <div className="bg-[#1A1A1A] rounded-xl p-5">
                   <div className="text-[#FF5912] font-semibold mb-2">ISO 9001:2015</div>
@@ -569,17 +567,26 @@ export default function ProductsPage() {
             Get in touch with our team to discuss your requirements and receive a competitive quote.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-[#FF5912] px-8 py-3 rounded-full font-medium transition-all duration-300"
+              onClick={() => router.push('/contact')}
             >
               Request a Quote
             </motion.button>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-transparent border border-white text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Prabhat-Steel-Catalog.pdf';
+                link.download = 'Prabhat-Steel-Catalog.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               Download Catalog
             </motion.button>
