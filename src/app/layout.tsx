@@ -506,11 +506,11 @@ export default function RootLayout({
                     <span className="text-[#FBF8F3]/70">prabhatsteelconnect@gmail.com</span>
                   </li>
                 </ul>
-                <div className="mt-6">
+                {/* <div className="mt-6">
                   <button className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300">
                     Get a Quote
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
 

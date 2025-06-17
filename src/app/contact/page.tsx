@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { WhatsAppContactForm } from '@/components/WhatsAppContactForm';
+import { useRouter } from 'next/navigation';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -14,7 +15,7 @@ export default function Contact() {
         message: '',
         product: 'Select a product'
     });
-
+    const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -484,6 +485,7 @@ export default function Contact() {
                             className="bg-white text-[#FF5912] px-8 py-3 rounded-full font-medium transition-all duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={()=> router.push("/contact")}
                         >
                             Schedule a Consultation
                         </motion.button>
