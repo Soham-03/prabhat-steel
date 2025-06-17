@@ -58,6 +58,23 @@ export default function RootLayout({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.height = '100vh';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    }
+
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navItems = [
     { label: "HOME", href: "/" },
     { label: "ABOUT", href: "/about" },
@@ -221,7 +238,7 @@ export default function RootLayout({
 
               {/* Mobile menu button */}
               <button
-                className="lg:hidden relative z-10"
+                className="lg:hidden relative z-50"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <span className="sr-only">Open menu</span>
@@ -236,105 +253,109 @@ export default function RootLayout({
               <AnimatePresence>
                 {mobileMenuOpen && (
                   <motion.div
-                    className="fixed inset-0 bg-[#0A0A0A] z-40 lg:hidden flex flex-col"
+                    className="fixed inset-0 bg-[#0A0A0A] z-40 lg:hidden"
                     initial={{ x: '100%' }}
                     animate={{ x: 0 }}
                     exit={{ x: '100%' }}
                     transition={{ type: 'tween', duration: 0.3 }}
                   >
-                    <div className="flex flex-col h-full px-6 py-24 overflow-y-auto">
-                      <div className="flex flex-col space-y-6">
-                        {navItems.map((item, index) => (
-                          <div key={index} className="relative">
-                            {item.hasDropdown ? (
-                              <div>
-                                <button
-                                  className={`text-2xl font-medium flex items-center justify-between w-full ${pathname === item.href || pathname.startsWith(item.href + '/')
+                    <div className="flex flex-col h-full overflow-y-auto">
+                      {/* Mobile menu content container */}
+                      <div className="flex-1 px-6 py-24">
+                        <div className="flex flex-col space-y-6">
+                          {navItems.map((item, index) => (
+                            <div key={index} className="relative">
+                              {item.hasDropdown ? (
+                                <div>
+                                  <button
+                                    className={`text-2xl font-medium flex items-center justify-between w-full ${pathname === item.href || pathname.startsWith(item.href + '/')
+                                      ? 'text-[#FF5912]'
+                                      : 'text-[#FBF8F3]'
+                                      }`}
+                                    onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                                  >
+                                    {item.label}
+                                    <svg
+                                      className={`w-6 h-6 transition-transform duration-300 ${mobileProductsOpen ? 'rotate-180' : ''}`}
+                                      fill="none"
+                                      stroke="currentColor"
+                                      viewBox="0 0 24 24"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                  </button>
+
+                                  <AnimatePresence>
+                                    {mobileProductsOpen && (
+                                      <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="mt-4 ml-4 overflow-hidden"
+                                      >
+                                        <div className="space-y-3 border-l-2 border-[#2A2A2A] pl-4">
+                                          {productCategories.map((product, idx) => (
+                                            <Link
+                                              key={idx}
+                                              href={product.href}
+                                              className={`block text-lg ${pathname === product.href
+                                                ? 'text-[#FF5912]'
+                                                : 'text-[#FBF8F3]/80 hover:text-[#FF5912]'
+                                                }`}
+                                              onClick={() => setMobileMenuOpen(false)}
+                                            >
+                                              {product.name}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                        <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
+                                          <Link
+                                            href={item.href}
+                                            className="block text-lg text-[#FF5912] font-medium"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                          >
+                                            View All Products
+                                          </Link>
+                                        </div>
+                                      </motion.div>
+                                    )}
+                                  </AnimatePresence>
+                                </div>
+                              ) : (
+                                <Link
+                                  href={item.href}
+                                  className={`text-2xl font-medium block ${pathname === item.href
                                     ? 'text-[#FF5912]'
                                     : 'text-[#FBF8F3]'
                                     }`}
-                                  onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                                  onClick={() => setMobileMenuOpen(false)}
                                 >
                                   {item.label}
-                                  <svg
-                                    className={`w-6 h-6 transition-transform duration-300 ${mobileProductsOpen ? 'rotate-180' : ''}`}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                                  </svg>
-                                </button>
-
-                                <AnimatePresence>
-                                  {mobileProductsOpen && (
-                                    <motion.div
-                                      initial={{ height: 0, opacity: 0 }}
-                                      animate={{ height: 'auto', opacity: 1 }}
-                                      exit={{ height: 0, opacity: 0 }}
-                                      transition={{ duration: 0.3 }}
-                                      className="mt-4 ml-4 overflow-hidden"
-                                    >
-                                      <div className="space-y-3 border-l-2 border-[#2A2A2A] pl-4">
-                                        {productCategories.map((product, idx) => (
-                                          <Link
-                                            key={idx}
-                                            href={product.href}
-                                            className={`block text-lg ${pathname === product.href
-                                              ? 'text-[#FF5912]'
-                                              : 'text-[#FBF8F3]/80 hover:text-[#FF5912]'
-                                              }`}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                          >
-                                            {product.name}
-                                          </Link>
-                                        ))}
-                                      </div>
-                                      <div className="mt-4 pt-4 border-t border-[#2A2A2A]">
-                                        <Link
-                                          href={item.href}
-                                          className="block text-lg text-[#FF5912] font-medium"
-                                          onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                          View All Products
-                                        </Link>
-                                      </div>
-                                    </motion.div>
+                                  {pathname === item.href && (
+                                    <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-[#FF5912] rounded-full" />
                                   )}
-                                </AnimatePresence>
-                              </div>
-                            ) : (
-                              <Link
-                                href={item.href}
-                                className={`text-2xl font-medium block ${pathname === item.href
-                                  ? 'text-[#FF5912]'
-                                  : 'text-[#FBF8F3]'
-                                  }`}
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {item.label}
-                                {pathname === item.href && (
-                                  <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-[#FF5912] rounded-full" />
-                                )}
-                              </Link>
-                            )}
+                                </Link>
+                              )}
 
-                            {pathname === item.href && !item.hasDropdown && (
-                              <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-[#FF5912] rounded-full" />
-                            )}
+                              {pathname === item.href && !item.hasDropdown && (
+                                <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-[#FF5912] rounded-full" />
+                              )}
 
-                            {item.hasDropdown && (pathname === item.href || pathname.startsWith(item.href + '/')) && (
-                              <span className="absolute -left-4 top-3 w-2 h-2 bg-[#FF5912] rounded-full" />
-                            )}
-                          </div>
-                        ))}
+                              {item.hasDropdown && (pathname === item.href || pathname.startsWith(item.href + '/')) && (
+                                <span className="absolute -left-4 top-3 w-2 h-2 bg-[#FF5912] rounded-full" />
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
-                      <div className="mt-auto">
-                        <button className="w-full bg-[#FF5912] text-white px-6 py-3 rounded-full text-lg font-medium my-8">
+                      {/* Bottom section with button, social links, and contact info */}
+                      <div className="px-6 pb-8">
+                        {/* <button className="w-full bg-[#FF5912] text-white px-6 py-3 rounded-full text-lg font-medium my-8">
                           Request Quote
-                        </button>
+                        </button> */}
 
                         <div className="flex items-center space-x-4 justify-center mt-4">
                           {['instagram', 'youtube', 'linkedin'].map((social) => (
