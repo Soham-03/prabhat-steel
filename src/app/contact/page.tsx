@@ -204,7 +204,7 @@ export default function Contact() {
                                         ),
                                         title: "Location",
                                         details: ["202, Panjrapole Road, Near,","Madhav Baug Post Office,", "Mumbai - 400004"],
-                                        link: "https://maps.google.com/?q=202,PanjrapoleRoad,NearMadhavBaugPostOffice,Mumbai-400004"
+                                        link: "https://www.google.com/maps/place/Prabhat+Steel/@18.9540711,72.8273083,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce164e1d5b9b:0x3c7d3a21dcfe1c99!8m2!3d18.9540711!4d72.8273083!16s%2Fg%2F1ptybh1cg?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D"
                                     }
                                 ].map((item, index) => (
                                     <motion.div
@@ -333,7 +333,7 @@ export default function Contact() {
                     >
                         {/* Google Maps Embed */}
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.447673425917!2d72.82610827520243!3d18.955826582224205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce3d68addbe7%3A0x620b9399b5db34c9!2s202%2C%20Panjrapol%20Rte%2C%20near%20MADHAVBAUGH%20POST%20OFFICE%2C%20near%20Cawasji%20Patel%20Tank%2C%20Marine%20Lines%20East%2C%20Gulal%20Wadi%2C%20Bhuleshwar%2C%20Mumbai%2C%20Maharashtra%20400004!5e0!3m2!1sen!2sin!4v1746643335632!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.4873816290383!2d72.8247333755371!3d18.954071082225646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce164e1d5b9b%3A0x3c7d3a21dcfe1c99!2sPrabhat%20Steel!5e0!3m2!1sen!2sin!4v1750229951407!5m2!1sen!2sin"
                             className="absolute inset-0 w-full h-full border-0"
                             allowFullScreen={true}
                             loading="lazy"
@@ -351,7 +351,7 @@ export default function Contact() {
                             </p>
                             <div className="flex gap-4">
                                 <a
-                                    href="https://maps.google.com/?q=202,PanjrapoleRoad,NearMadhavBaugPostOffice,Mumbai-400004"
+                                    href="https://www.google.com/maps/place/Prabhat+Steel/@18.9540711,72.8247334,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce164e1d5b9b:0x3c7d3a21dcfe1c99!8m2!3d18.9540711!4d72.8273083!16s%2Fg%2F1ptybh1cg?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="bg-[#FF5912] hover:bg-[#FF5912]/90 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm flex items-center gap-2"
@@ -363,7 +363,7 @@ export default function Contact() {
                                     Get Directions
                                 </a>
                                 <a
-                                    href="tel:+919876543210"
+                                    href="tel:+918369657425"
                                     className="bg-[#1A1A1A] hover:bg-[#222222] text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm flex items-center gap-2"
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
