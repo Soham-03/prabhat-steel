@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useParams } from 'next/navigation';
+import { desc } from 'framer-motion/client';
 
 // Product data for each category (same as before, keeping for reference)
 // const productData = {
@@ -389,6 +390,30 @@ const productData = {
             "Hygienic and easy to clean",
             "100% recyclable material",
             "Low maintenance requirements"
+        ],
+        our_range: [
+            "Sheets & Plates",
+            "Pipes & Tubes",
+            "Rods & Bars",
+            "Fasteners & Hardware",
+            "Fittings & Flanges"
+        ],
+        product_range: [
+            {
+                name: "Sheets & Plates",
+                description: "High-quality stainless steel sheets and plates for various industrial applications, available in multiple grades and finishes.",
+                images: ["", ""]
+            },
+            {
+                name: "Sheets & Plates",
+                description: "High-quality stainless steel sheets and plates for various industrial applications, available in multiple grades and finishes.",
+                images: ["", ""]
+            },
+            {
+                name: "Sheets & Plates",
+                description: "High-quality stainless steel sheets and plates for various industrial applications, available in multiple grades and finishes.",
+                images: ["", ""]
+            }
         ],
         products: [
             {

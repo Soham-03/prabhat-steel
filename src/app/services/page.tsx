@@ -46,6 +46,170 @@ export default function Services() {
         }
     };
 
+    // const services = [
+    //     {
+    //         id: 1,
+    //         title: "Steel Slitting Service",
+    //         subtitle: "Precision Stainless Steel Slitting",
+    //         description: "We offer precision Stainless Steel Slitting Services to meet the diverse needs of industries requiring customized strip widths and coil sizes. Our advanced slitting lines ensure clean, burr-free edges and tight tolerances, suitable for both decorative and industrial applications.",
+    //         image: "/steel-slitting.jpg",
+    //         icon: (
+    //             <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    //             </svg>
+    //         ),
+    //         features: [
+    //             "Material Handled: SS 201, SS 304, SS 316, SS 430 & other grades",
+    //             "Thickness Range: 0.20 mm to 4 mm",
+    //             "Width Range: 10 mm to 1250 mm",
+    //             "Coil Weight Capacity: Up to 10 MT",
+    //             "Finish Types: 2B, BA, No.4, Mirror, Matte",
+    //             "Edge Finish: Mill edge / Slit edge"
+    //         ],
+    //         advantages: [
+    //             "High accuracy and consistency",
+    //             "Fast turnaround time",
+    //             "Suitable for automotive, kitchenware, electrical, and fabrication sectors",
+    //             "Custom widths as per client requirements"
+    //         ],
+    //         location: "Service available at our Mumbai-based facility with prompt delivery across India."
+    //     },
+    //     {
+    //         id: 2,
+    //         title: "Galvanising Service",
+    //         subtitle: "Reliable Galvanized Iron Coating",
+    //         description: "We offer reliable Galvanized Iron (GI) Coating Services for steel products to enhance corrosion resistance and extend durability. The zinc coating acts as a protective barrier, preventing rust formation and offering excellent surface protection in outdoor and industrial environments.",
+    //         image: "/galvanising.jpg",
+    //         icon: (
+    //             <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+    //             </svg>
+    //         ),
+    //         features: [
+    //             "Process Type: Hot-Dip Galvanizing / Electro-Galvanizing (as per requirement)",
+    //             "Coating Thickness: 80 GSM to 275 GSM (custom coating available)",
+    //             "Applicable Materials: Steel sheets, coils, pipes, and fabricated components",
+    //             "Standards: IS 277 / ASTM A653 / JIS G3302",
+    //             "Finish Options: Regular spangle, zero spangle, matte finish"
+    //         ],
+    //         applications: [
+    //             "Construction and infrastructure",
+    //             "Automotive components",
+    //             "Electrical panels and appliances",
+    //             "HVAC and ducting",
+    //             "Industrial fabrication"
+    //         ],
+    //         advantages: [
+    //             "Superior corrosion resistance",
+    //             "Long-lasting protection",
+    //             "Cost-effective surface treatment",
+    //             "Uniform and durable coating quality"
+    //         ],
+    //         location: "Coating service available at our Mumbai facility. Quick processing and dispatch with quality assurance."
+    //     },
+    //     {
+    //         id: 3,
+    //         title: "PVD Colour Coating",
+    //         subtitle: "Premium Physical Vapor Deposition",
+    //         description: "We offer high-quality PVD (Physical Vapor Deposition) Coating Services for stainless steel sheets, profiles, and components. PVD coating enhances the surface with a decorative, durable, and corrosion-resistant finish available in various colors.",
+    //         image: "/pvd-coating.jpg",
+    //         icon: (
+    //             <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4 4 4 0 004-4V5z"></path>
+    //             </svg>
+    //         ),
+    //         features: [
+    //             "Base Material: SS 304 / SS 316 and other stainless steel grades",
+    //             "Coating Colors Available: Gold, Rose Gold, Black, Blue, Bronze, Champagne, Copper, and more",
+    //             "Finish Types: Mirror, Matte, Hairline, Bead Blast",
+    //             "Coating Thickness: Micron-level, uniform finish",
+    //             "Application Methods: Vacuum-based PVD process ensuring excellent adhesion and durability",
+    //             "Surface Hardness: Enhanced scratch resistance and wear resistance"
+    //         ],
+    //         applications: [
+    //             "Interior design and luxury architecture",
+    //             "Elevators and escalators",
+    //             "Hotel and showroom decor",
+    //             "Signage and nameplates",
+    //             "Furniture, hardware, and fittings"
+    //         ],
+    //         advantages: [
+    //             "Elegant, premium appearance",
+    //             "Long-lasting finish with UV and corrosion resistance",
+    //             "Eco-friendly and non-toxic process",
+    //             "Low maintenance"
+    //         ],
+    //         location: "Available at our Mumbai facility with a wide range of design and customization options. Fast turnaround and quality assurance."
+    //     },
+    //     {
+    //         id: 4,
+    //         title: "Laser Cutting Service",
+    //         subtitle: "Precision CNC Laser Cutting",
+    //         description: "We provide precision Laser Cutting Services for stainless steel, mild steel, aluminum, and other metals with high accuracy and clean-edge finishes. Our advanced CNC laser machines ensure superior cutting quality, fast turnaround, and customization as per client specifications.",
+    //         image: "/laser-cutting.jpg",
+    //         icon: (
+    //             <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    //             </svg>
+    //         ),
+    //         features: [
+    //             "Materials: SS 304 / SS 316 / MS / Aluminum / Brass / Copper",
+    //             "Thickness Capacity: SS: up to 12 mm, MS: up to 16 mm, Aluminum: up to 6 mm",
+    //             "Cutting Area: Up to 1500 mm x 3000 mm",
+    //             "Tolerances: High precision with tight tolerances",
+    //             "Design Formats Accepted: DXF, DWG, CDR, PDF, AI"
+    //         ],
+    //         applications: [
+    //             "Architectural and interior design panels",
+    //             "Industrial parts and machine components",
+    //             "Signage and decorative elements",
+    //             "Electrical enclosures and custom fabrications",
+    //             "Elevator panels, nameplates, and grills"
+    //         ],
+    //         advantages: [
+    //             "Clean, burr-free edges",
+    //             "High-speed, cost-effective production",
+    //             "Capable of intricate and complex patterns",
+    //             "Minimal material wastage"
+    //         ],
+    //         location: "Laser cutting available at our Mumbai facility. We offer both small-batch and bulk orders with timely delivery and quality control."
+    //     },
+    //     {
+    //         id: 5,
+    //         title: "Aluminum Lettering Rolls",
+    //         subtitle: "Specialized Channel Roll Slitting",
+    //         description: "We offer specialized Aluminum Letter Channel Roll Slitting Services tailored for signage, letter bending, and channel letter fabrication. Our slitted aluminum rolls are available in all required sizes, are hand bendable, and designed for easy forming and smooth letter shaping.",
+    //         image: "/aluminum-lettering.jpg",
+    //         icon: (
+    //             <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+    //             </svg>
+    //         ),
+    //         features: [
+    //             "Material: Soft, signage-grade Aluminum",
+    //             "Thickness: 0.3 mm to 1 mm",
+    //             "Width: Custom slitted from 20 mm to 300 mm",
+    //             "Length: Coil form (as per requirement)",
+    //             "Finish Options: Plain, Anodized, Color Coated, Brushed, Mirror",
+    //             "Edge Finish: Burr-free, ready for manual or machine bending",
+    //             "Availability: Indian and Imported material options"
+    //         ],
+    //         applications: [
+    //             "3D Channel Letters",
+    //             "Sign Boards and Advertising Displays",
+    //             "Indoor & Outdoor Branding",
+    //             "Architectural Signage"
+    //         ],
+    //         advantages: [
+    //             "Easy to hand-bend for shaping letters",
+    //             "Smooth surface and consistent width",
+    //             "Available in ready stock or custom cut",
+    //             "Fast processing and delivery"
+    //         ],
+    //         location: "Slitting service available at our Mumbai facility with precision machines and quality assurance. Bulk and small-batch orders accepted."
+    //     }
+    // ];
+
     const services = [
         {
             id: 1,
@@ -207,6 +371,79 @@ export default function Services() {
                 "Fast processing and delivery"
             ],
             location: "Slitting service available at our Mumbai facility with precision machines and quality assurance. Bulk and small-batch orders accepted."
+        },
+        {
+            id: 6,
+            title: "SS Custom Rod Drawing Service",
+            subtitle: "Precision Stainless Steel Rod Drawing",
+            description: "Our Custom Stainless Steel Rod Drawing Service delivers precision-engineered rods tailored to meet your exact specifications. Whether you require unique dimensions, enhanced surface finish, or specific mechanical properties, we provide high-quality stainless steel rods through advanced cold drawing techniques.",
+            image: "/ss-rod-drawing.jpg",
+            icon: (
+                <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                </svg>
+            ),
+            features: [
+                "Custom Sizes & Tolerances: From small diameters to heavy-duty rods, manufactured to exact dimensional requirements",
+                "Grade Variety: Available in SS 304, SS 316, SS 410, SS 420, and duplex alloys",
+                "Cold Drawing Process: Increases strength, improves surface finish, and ensures tight tolerances",
+                "Surface Finish Options: Polished, matte, rough-turned, or peeled finish",
+                "Compliance & Certification: Full material traceability and certifications (ASTM, EN, etc.)",
+                "Dimensional Range: Custom diameters and lengths as per specifications"
+            ],
+            applications: [
+                "Aerospace components",
+                "Construction and structural applications",
+                "Marine industry components",
+                "Medical equipment and devices",
+                "Oil & gas industry",
+                "Custom fabrication projects"
+            ],
+            advantages: [
+                "Quick turnaround times",
+                "Small and large volume capabilities",
+                "Experienced technical team",
+                "Quality assurance at every step",
+                "Enhanced mechanical properties through cold drawing"
+            ],
+            location: "Rod drawing service available at our Mumbai facility with advanced cold drawing equipment and comprehensive quality control."
+        },
+        {
+            id: 7,
+            title: "Aluminum Custom Extrusion Service",
+            subtitle: "Custom Die Design & Manufacturing",
+            description: "Unlock precision, performance, and flexibility with our Custom Aluminum Extrusion Service—featuring in-house custom die design and manufacturing to bring your unique profiles to life. We work closely with you to develop aluminum profiles tailored to your specifications.",
+            image: "/aluminum-extrusion.jpg",
+            icon: (
+                <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+            ),
+            features: [
+                "Custom Profile Design: Complex shapes, tight tolerances, and industry-specific requirements",
+                "In-House Die Making: Expert tooling team designs and manufactures high-precision extrusion dies",
+                "Wide Range of Alloys: Available in 6061, 6063, 6082, 7075, and more specialized alloys",
+                "Flexible Dimensions & Tolerances: From micro-extrusions to heavy structural profiles",
+                "Post-Processing Available: Machining, anodizing, powder coating, cutting, punching, and assembly",
+                "Design Support: CAD assistance and profile optimization"
+            ],
+            applications: [
+                "Architectural profiles and building systems",
+                "Automotive components and assemblies",
+                "Electronics housings and heat sinks",
+                "Aerospace structural components",
+                "Industrial equipment frames",
+                "Furniture and fixture profiles",
+                "Renewable energy applications"
+            ],
+            advantages: [
+                "End-to-end support from design to delivery",
+                "Rapid die production and prototype sampling",
+                "Consistent quality and on-time delivery",
+                "Competitive pricing for both low and high volumes",
+                "Fast turnaround and lower tooling costs"
+            ],
+            location: "Custom extrusion service available at our Mumbai facility with in-house die manufacturing capabilities and comprehensive post-processing options."
         }
     ];
 

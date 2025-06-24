@@ -212,13 +212,16 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                <span className="text-[#FF5912]">Prabhat Steel</span> - Excellence in Metal
+                <span className="text-[#FF5912]">Prabhat Steel</span> - Excellence in Metal and Steel Industry
               </h2>
               <p className="text-[#FBF8F3]/80 mb-6">
-                The stainless steel sheet is a highly sought-after product used globally by industrialists across various sectors. It plays a significant role in the manufacturing and production of diverse applications.
+                Prabhat Steel, based in Mumbai, is a leading stockist and supplier of ferrous and non-ferrous metals, serving a wide range of industries including construction, infrastructure, manufacturing, engineering, and fabrication. With years of experience and a reputation for quality, we are committed to delivering premium materials and unmatched service.
               </p>
               <p className="text-[#FBF8F3]/80 mb-8">
-                Prabhat Steel is the top steel sheet supplier in India. We utilize premium raw materials and cutting-edge technology. Our team of experts is committed to delivering top-quality sheets that meet our customers' specific requirements and demands.
+                We deal in a comprehensive range of ferrous materials such as stainless steel, carbon steel, alloy steel, and mild steel, and also stock an extensive variety of non-ferrous metals including aluminium, copper, brass, titanium, and nickel alloys.
+              </p>
+              <p className="text-[#FBF8F3]/80 mb-6">
+                Our products are available in sheet, coil, plate, pipe, rod, bar, angle, and fitting forms, catering to both standard and customized requirements. We maintain strong ties with reputed domestic and international mills, ensuring consistent quality and timely delivery.
               </p>
               <motion.div 
                 className="flex flex-wrap gap-3"
@@ -381,7 +384,7 @@ export default function Home() {
                 Commitment to <span className="text-[#FF5912]">Quality Excellence</span>
               </h2>
               <p className="text-[#FBF8F3]/80 mb-6">
-                Our sheets boast machined and stamped finishing, ensuring they can withstand high temperatures and pressures while delivering excellent performance and remaining undamaged.
+                At Prabhat Steel, quality is more than a promise — it's the foundation of everything we do. With a focus on precision, reliability, and customer satisfaction, we ensure that every product meets the highest standards. Our commitment to excellence drives us to deliver superior ferrous and non-ferrous materials with consistency, integrity, and unmatched service.
               </p>
               
               <ul className="space-y-4">

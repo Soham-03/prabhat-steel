@@ -182,8 +182,8 @@ export default function Contact() {
                                             </svg>
                                         ),
                                         title: "Phone",
-                                        details: ["+91 7021530230", "+91 9167029680"],
-                                        link: "tel:+917021530230"
+                                        details: ["+91 8369657425", "+91 8355908724", "+91 7021530230"],
+                                        link: "tel:+918369657425"
                                     },
                                     {
                                         icon: (
@@ -192,7 +192,7 @@ export default function Contact() {
                                             </svg>
                                         ),
                                         title: "Email",
-                                        details: ["prabhatsteelconnect@gmail.com"],
+                                        details: ["prabhatsteelconnect@gmail.com", "prabhatsteelsales@gmail.com"],
                                         link: "mailto:prabhatsteelconnect@gmail.com"
                                     },
                                     {
