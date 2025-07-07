@@ -82,18 +82,18 @@ const productCategories = [
     popular: ["SS 304/304L Sheets", "SS 316/316L Sheets", "SS 321 Sheets", "SS 410 Sheets"]
   },
   {
-    id: "ms-gi-coated",
-    name: "MS & GI Coated Products",
-    image: "/ms_and_gi.jpg",
-    description: "Cost-effective mild steel and galvanized iron solutions with excellent strength and corrosion protection.",
-    popular: ["MS Sheets & Plates", "GI Sheets & Coils", "MS Pipes & Tubes", "GI Pipes & Fittings"]
-  },
-  {
     id: "aluminium",
     name: "Aluminium",
     image: "/aluminium.jpg",
     description: "Lightweight, highly recyclable material with good corrosion resistance for various applications.",
     popular: ["Aluminium 1100 Sheets", "Aluminium 5052 Sheets", "Aluminium 6061 Sheets"]
+  },
+  {
+    id: "ms-gi-coated",
+    name: "MS & GI Coated Products",
+    image: "/ms_and_gi.jpg",
+    description: "Cost-effective mild steel and galvanized iron solutions with excellent strength and corrosion protection.",
+    popular: ["MS Sheets & Plates", "GI Sheets & Coils", "MS Pipes & Tubes", "GI Pipes & Fittings"]
   },
   {
     id: "duplex-steel",

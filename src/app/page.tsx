@@ -32,18 +32,18 @@ export default function Home() {
       features: ["304/316 Grades", "Food Grade", "Corrosion Resistant"]
     },
     {
-      name: "MS & GI Coated Products", 
-      slug: "ms-gi-coated",
-      image: "/ms_and_gi.jpg",
-      description: "Cost-effective solutions with excellent strength and coating protection",
-      features: ["Galvanized Coating", "Structural Grade", "Weather Resistant"]
-    },
-    {
       name: "Aluminium Products",
       slug: "aluminium", 
       image: "/aluminium.jpg",
       description: "Lightweight yet strong with excellent thermal conductivity",
       features: ["Lightweight", "Conductive", "Aerospace Grade"]
+    },
+    {
+      name: "MS & GI Coated Products", 
+      slug: "ms-gi-coated",
+      image: "/ms_and_gi.jpg",
+      description: "Cost-effective solutions with excellent strength and coating protection",
+      features: ["Galvanized Coating", "Structural Grade", "Weather Resistant"]
     },
     {
       name: "Duplex Steel Products",

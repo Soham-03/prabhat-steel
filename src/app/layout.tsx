@@ -24,8 +24,8 @@ const inter = Inter({ subsets: ['latin'] });
 // ];
 const productCategories = [
   { name: "Stainless Steel", href: "/products/stainless-steel" },
-  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" },
   { name: "Aluminium", href: "/products/aluminium" },
+  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" },
   { name: "Duplex Steel", href: "/products/duplex-steel" },
   { name: "Super Duplex Steel", href: "/products/super-duplex-steel" },
   { name: "Alloy Steel", href: "/products/alloy-steel" },
