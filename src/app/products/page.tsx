@@ -146,20 +146,20 @@ const productCategories = [
   }
 ];
 // Industries served
-const industries = [
-  { name: "Oil & Gas", icon: "🛢️" },
-  { name: "Marine", icon: "⚓" },
-  { name: "Chemical", icon: "⚗️" },
-  { name: "Power Generation", icon: "⚡" },
-  { name: "Automotive", icon: "🚗" },
-  { name: "Aerospace", icon: "✈️" },
-  { name: "Pharmaceutical", icon: "💊" },
-  { name: "Food Processing", icon: "🍽️" },
-  { name: "Construction", icon: "🏗️" },
-  { name: "Pulp & Paper", icon: "📄" },
-  { name: "Desalination", icon: "💧" },
-  { name: "Medical", icon: "🏥" }
-];
+// const industries = [
+//   // { name: "Oil & Gas", icon: "🛢️" },
+//   // { name: "Marine", icon: "⚓" },
+//   // { name: "Chemical", icon: "⚗️" },
+//   // { name: "Power Generation", icon: "⚡" },
+//   // { name: "Automotive", icon: "🚗" },
+//   // { name: "Aerospace", icon: "✈️" },
+//   // // { name: "Pharmaceutical", icon: "💊" },
+//   // { name: "Food Processing", icon: "🍽️" },
+//   // { name: "Construction", icon: "🏗️" },
+//   // { name: "Pulp & Paper", icon: "📄" },
+//   // { name: "Desalination", icon: "💧" },
+//   // { name: "Medical", icon: "🏥" }
+// ];
 
 export default function ProductsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -285,7 +285,7 @@ export default function ProductsPage() {
             </div>
 
             {/* Industry Filters */}
-            <div className="py-4 overflow-x-auto">
+            {/* <div className="py-4 overflow-x-auto">
               <div className="flex flex-wrap justify-center gap-3 mb-2">
                 <button
                   onClick={() => setActiveFilter(null)}
@@ -311,7 +311,7 @@ export default function ProductsPage() {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>
@@ -425,7 +425,7 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
@@ -439,7 +439,7 @@ export default function ProductsPage() {
                 <h3 className="font-medium">{industry.name}</h3>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
