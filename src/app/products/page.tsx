@@ -440,7 +440,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-16 bg-[#0A0A0A]">
+      {/* <section className="py-16 bg-[#0A0A0A]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
@@ -449,7 +449,7 @@ export default function ProductsPage() {
             <p className="text-[#FBF8F3]/70 max-w-3xl mx-auto">
               Our premium metal products are designed to meet the demanding requirements of a wide range of industries.
             </p>
-          </div>
+          </div> */}
 
           {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {industries.map((industry, index) => (
@@ -466,8 +466,8 @@ export default function ProductsPage() {
               </motion.div>
             ))}
           </div> */}
-        </div>
-      </section>
+        {/* </div>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-16">
