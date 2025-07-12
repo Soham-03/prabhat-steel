@@ -78,71 +78,97 @@ const productCategories = [
     id: "stainless-steel",
     name: "Stainless Steel",
     image: "/stainless_steel.jpg",
-    description: "High-quality stainless steel products with excellent corrosion resistance and durability.",
-    popular: ["SS 304/304L Sheets", "SS 316/316L Sheets", "SS 321 Sheets", "SS 410 Sheets"]
+    description: "Premium stainless steel products offering exceptional corrosion resistance, durability, and aesthetic appeal for a wide range of applications.",
+    popular: ["SS 304/304L Sheets", "SS 316/316L Sheets", "SS 202 Sheets", "SS 321 Sheets", "SS 410 Sheets", "SS Pipes & Tubes", "SS Rods & Bars"],
+    features: ["Superior corrosion resistance", "Excellent heat resistance", "High strength-to-weight ratio", "Hygienic and easy to clean", "100% recyclable material"]
   },
   {
     id: "aluminium",
     name: "Aluminium",
     image: "/aluminium.jpg",
-    description: "Lightweight, highly recyclable material with good corrosion resistance for various applications.",
-    popular: ["Aluminium 1100 Sheets", "Aluminium 5052 Sheets", "Aluminium 6061 Sheets"]
-  },
-  {
-    id: "ms-gi-coated",
-    name: "MS & GI Coated Products",
-    image: "/ms_and_gi.jpg",
-    description: "Cost-effective mild steel and galvanized iron solutions with excellent strength and corrosion protection.",
-    popular: ["MS Sheets & Plates", "GI Sheets & Coils", "MS Pipes & Tubes", "GI Pipes & Fittings"]
+    description: "High-performance aluminium products combining lightweight properties with excellent corrosion resistance, thermal conductivity, and formability.",
+    popular: ["Aluminium 1100 Sheets", "Aluminium 5052 Sheets", "Aluminium 6061 Sheets", "Aluminium 6063 Sections", "Aluminium 7075 Sheets", "Aluminium Pipes & Tubes"],
+    features: ["Exceptional strength-to-weight ratio", "Superior corrosion resistance", "Excellent thermal and electrical conductivity", "100% recyclable and sustainable"]
   },
   {
     id: "duplex-steel",
     name: "Duplex Steel",
     image: "/duplex-steel.jpg",
-    description: "Superior strength and corrosion resistance for demanding industrial applications.",
-    popular: ["Duplex 2205 Sheets", "Duplex 2304 Sheets", "Duplex S31803 Sheets"]
+    description: "Advanced duplex steel solutions offering optimal balance of strength, corrosion resistance, and ductility through unique dual-phase microstructure.",
+    popular: ["Duplex 2205 Sheets", "Duplex 2304 Sheets", "Duplex S31803 Sheets", "Duplex Steel Pipes & Tubes", "Duplex Steel Fasteners"],
+    features: ["Superior strength compared to austenitic stainless steels", "Excellent resistance to stress corrosion cracking", "High resistance to chloride pitting", "Cost-effective due to lower nickel content"]
   },
   {
     id: "super-duplex-steel",
     name: "Super Duplex Steel",
     image: "/super-duplex-steel.jpg",
-    description: "Enhanced performance in extreme environments with excellent resistance to pitting and crevice corrosion.",
-    popular: ["Super Duplex 2507 Sheets", "Super Duplex S32750 Sheets", "Super Duplex S32760 Sheets"]
+    description: "Premium super duplex steel products delivering exceptional corrosion resistance and superior mechanical properties for the most challenging environments.",
+    popular: ["Super Duplex 2507 Sheets", "Super Duplex S32750 Sheets", "Super Duplex S32760 Sheets", "Super Duplex Steel Pipes", "Super Duplex Fasteners"],
+    features: ["Outstanding resistance to pitting and crevice corrosion", "Superior chloride stress corrosion cracking resistance", "Excellent strength", "Extended service life in extreme environments"]
   },
   {
     id: "alloy-steel",
     name: "Alloy Steel",
     image: "/alloy-steel.webp",
-    description: "Specialized alloy compositions for high-temperature and high-pressure applications.",
-    popular: ["Alloy 20 Sheets", "Incoloy 800 Sheets", "Inconel 600 Sheets"]
-  },
-  {
-    id: "brass-copper",
-    name: "Brass & Copper",
-    image: "/brass-copper.webp",
-    description: "Excellent thermal and electrical conductivity with corrosion resistance for marine and electrical applications.",
-    popular: ["Copper C11000 Sheets", "Brass C26000 Sheets", "Cupronickel 70/30 Sheets", "Cupronickel 90/10 Sheets"]
-  },
-  {
-    id: "carbon-steel",
-    name: "Carbon Steel",
-    image: "/carbon-steel.jpg",
-    description: "High-strength, cost-effective carbon steel products for structural and general engineering applications.",
-    popular: ["Low Carbon Steel Sheets", "Medium Carbon Steel Sheets", "Carbon Steel Pipes", "Carbon Steel Plates"]
-  },
-  {
-    id: "tool-steel",
-    name: "Tool Steel",
-    image: "/tool-steel.jpg",
-    description: "Premium tool steel with superior hardness and wear resistance for cutting tools and precision manufacturing.",
-    popular: ["D2 Tool Steel", "H13 Tool Steel", "O1 Tool Steel", "A2 Tool Steel"]
+    description: "Specialized alloy steel solutions featuring custom compositions engineered for superior strength, heat resistance, and durability in extreme operating conditions.",
+    popular: ["Alloy 20 Sheets", "Incoloy 800 Sheets", "Inconel 600 Sheets", "P91/T91 Alloy Sheets", "Alloy Steel Pipes & Tubes", "Alloy Steel Fasteners"],
+    features: ["Enhanced mechanical properties through precise alloying", "Superior performance in high-temperature applications", "Excellent resistance to mechanical fatigue", "Customizable properties for specific applications"]
   },
   {
     id: "hastelloy",
     name: "Hastelloy",
     image: "/hastealloy.jpg",
-    description: "Superior resistance to highly corrosive environments in chemical processing industries.",
-    popular: ["Hastelloy C-276 Sheets", "Hastelloy C-22 Sheets", "Hastelloy B-3 Sheets"]
+    description: "Premium Hastelloy superalloy products delivering exceptional corrosion resistance and high-temperature strength for the most demanding chemical processing applications.",
+    popular: ["Hastelloy C-276 Sheets", "Hastelloy C-22 Sheets", "Hastelloy B-3 Sheets", "Hastelloy X Sheets", "Hastelloy Pipes & Tubes", "Hastelloy Fasteners"],
+    features: ["Outstanding resistance to oxidizing and reducing environments", "Exceptional high-temperature strength and stability", "Superior resistance to stress corrosion cracking", "Thermal stability in extreme conditions"]
+  },
+  {
+    id: "brass-copper",
+    name: "Brass & Copper",
+    image: "/brass-copper.webp",
+    description: "Premium brass and copper products combining excellent thermal and electrical conductivity with corrosion resistance for diverse applications.",
+    popular: ["Copper C11000 Sheets", "Brass C26000 Sheets", "Cupronickel 70/30 Sheets", "Cupronickel 90/10 Sheets", "Copper & Brass Pipes", "Brass & Copper Fasteners"],
+    features: ["Exceptional thermal and electrical conductivity", "Excellent corrosion resistance, particularly in seawater", "Antimicrobial properties", "Attractive appearance with various finish options"]
+  },
+  {
+    id: "carbon-steel",
+    name: "Carbon Steel",
+    image: "/carbon-steel.jpg",
+    description: "High-quality carbon steel products delivering exceptional strength, durability, and versatility for structural, mechanical, and general engineering applications.",
+    popular: ["Low Carbon Steel Sheets", "Medium Carbon Steel Sheets", "High Carbon Steel Sheets", "Carbon Steel Pipes", "Carbon Steel Plates", "Carbon Steel Bars & Rods"],
+    features: ["High tensile strength and durability", "Excellent weldability and machinability", "Cost-effective material solution", "Wide range of carbon content options"]
+  },
+  {
+    id: "tool-steel",
+    name: "Tool Steel",
+    image: "/tool-steel.jpg",
+    description: "Precision tool steel solutions engineered for superior hardness, wear resistance, and toughness, designed for cutting tools and precision manufacturing.",
+    popular: ["D2 Tool Steel", "H13 Tool Steel", "O1 Tool Steel", "A2 Tool Steel", "S7 Tool Steel", "M2 High Speed Steel", "P20 Mold Steel"],
+    features: ["Exceptional hardness and wear resistance", "Superior toughness and impact resistance", "Excellent dimensional stability", "High-temperature performance"]
+  },
+  {
+    id: "ms-gi-coated",
+    name: "MS & GI Coated Products",
+    image: "/ms_and_gi.jpg",
+    description: "Comprehensive range of mild steel and galvanized iron products providing cost-effective solutions with excellent strength and corrosion protection.",
+    popular: ["MS Sheets & Plates", "GI Sheets & Coils", "MS Pipes & Tubes", "GI Pipes & Fittings", "MS & GI Fasteners", "MS Angles & Channels"],
+    features: ["Cost-effective material solutions", "Excellent strength and durability", "Superior corrosion protection (GI coating)", "Easy to fabricate and weld"]
+  },
+  {
+    id: "fasteners-hardware",
+    name: "Fasteners & Hardware",
+    image: "/fasteners_hardware.jpg",
+    description: "Extensive range of fasteners and hardware engineered for superior corrosion resistance, strength, and reliability in demanding environments.",
+    popular: ["Hex Bolts & Nuts", "Socket Head Cap Screws", "Machine Screws & Wood Screws", "Washers & Anchors", "Custom Fasteners & Hardware Accessories"],
+    features: ["Superior corrosion resistance in harsh environments", "High tensile and shear strength", "Wide range of sizes and thread types", "Non-magnetic and hygienic options", "Custom manufacturing available"]
+  },
+  {
+    id: "fittings-flanges",
+    name: "Fittings & Flanges",
+    image: "/fittings_flanges.jpg",
+    description: "Comprehensive range of stainless steel, alloy, and specialty fittings and flanges engineered for leak-proof connections and reliable performance.",
+    popular: ["Buttweld Fittings", "Forged Fittings", "Weld Neck Flanges", "Slip-On Flanges", "Blind Flanges", "Custom Fittings & Flanges"],
+    features: ["Leak-proof and high-strength connections", "Wide range of sizes and pressure ratings", "Manufactured to international standards (ASME, DIN, JIS)", "Available in multiple materials", "Custom fabrication available"]
   }
 ];
 // Industries served

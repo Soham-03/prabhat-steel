@@ -95,8 +95,8 @@ export default function AboutUs() {
         {
             title: "Pharmaceutical Industry",
             subtitle: "Supply in Pharmaceutical IND.",
-            description: "In the pharmaceutical industry, aluminum is used for packaging (e.g., blister packs) to protect medications, while stainless steel is used for equipment like mixers and storage tanks due to its durability, corrosion resistance, and easy cleaning. Both materials ensure safety, hygiene, and product integrity.",
-            image: "/pharma.png",
+            description: "Prabhat Steel, based in Mumbai, supplies high-quality ferrous and non-ferrous raw materials to the pharmaceutical industry. We offer a wide range of stainless steel (SS 304, SS 316L), carbon steel, aluminium, copper, and brass products used in pharmaceutical equipment, piping, and infrastructure.Our materials are sourced from trusted brands like Jindal, Hindalco, and other reputed manufacturers, ensuring quality and compliance with industry standards. With ready stock and prompt delivery, we support pharmaceutical manufacturers with reliable and efficient material supply.",
+            image:"/pharma.png",
             icon: (
                 <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"></path>
@@ -106,7 +106,7 @@ export default function AboutUs() {
         {
             title: "Automotive Industry",
             subtitle: "Supply to Automotive IND.",
-            description: "Aluminum is widely used in the automotive industry for its lightweight, corrosion-resistant, and high-strength properties. It helps improve fuel efficiency, enhance performance, and reduce emissions. Common applications include body panels, engine components, wheels, and frames, making aluminum essential for modern, sustainable vehicle design.",
+            description: "Prabhat Steel, Mumbai, supplies a comprehensive range of ferrous and non-ferrous raw materials to the automotive industry. We provide high-grade stainless steel, carbon steel, aluminium, copper, and brass materials used in manufacturing automotive components, body structures, and engineering systems.Our products are sourced from leading manufacturers like Jindal, Hindalco, and others, ensuring consistent quality and performance. With a focus on precision, durability, and timely delivery, Prabhat Steel supports the evolving needs of automotive OEMs and fabricators across India.",
             image: "/auto.png",
             icon: (
                 <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +117,7 @@ export default function AboutUs() {
         {
             title: "Solar Industry",
             subtitle: "Supply to Solar Industry",
-            description: "Aluminum is widely used in the solar industry for its lightweight, corrosion-resistant, and durable properties. It is primarily used in the manufacturing of solar panel frames, mounting systems, and supports, helping to ensure long-lasting performance and easy installation of solar energy systems.",
+            description: "Prabhat Steel, Mumbai, supplies reliable ferrous and non-ferrous raw materials to the solar industry. We offer stainless steel, carbon steel, aluminium, and other non-ferrous metals used in the fabrication of solar mounting structures, panel frames, support systems, and related components. Sourced from trusted brands like Jindal and Hindalco, our materials ensure strength, corrosion resistance, and long-term performance in outdoor and renewable energy applications. With quality stock and prompt service, Prabhat Steel supports solar power projects across India",
             image: "/solar.png",
             icon: (
                 <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +128,7 @@ export default function AboutUs() {
         {
             title: "Signage Projects",
             subtitle: "Supply for Signage Projects",
-            description: "We are a leading supplier of high-quality signage aluminum sheets, specializing in materials ideal for letter making and custom signage solutions. With a reputation for precision and durability, we provide top-grade aluminum sheets that meet the unique demands of the signage industry.",
+            description: "Prabhat Steel, based in Mumbai, supplies a wide range of ferrous and non-ferrous raw materials for signage and display projects. We provide high-quality aluminium sheets, coils, letter channel rolls, stainless steel, and other materials used in the fabrication of signboards, 3D letters, and structural frames.Our aluminium letter channel rolls are ideal for LED and acrylic signage, offering excellent formability, durability, and a smooth finish. Sourced from top manufacturers like Jindal and Hindalco, our materials meet the quality standards required for professional signage applications. With ready stock and timely delivery, Prabhat upports signage fabricators, desig nd contractors across India.",
             image: "/signage.png",
             icon: (
                 <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -139,7 +139,7 @@ export default function AboutUs() {
         {
             title: "Turnkey Projects",
             subtitle: "Supply for Turnkey Projects",
-            description: "Prabhat Steel is a top supplier for turnkey projects, offering a comprehensive range of hardware products, including SS fasteners, tapes, P.U. sealants, and all required ferrous and non-ferrous raw materials in aluminum and stainless steel. We assure exceptional service and consistent quality, delivering every product needed for your project with reliability and precision.",
+            description: "Prabhat Steel, Mumbai, supplies a complete range of ferrous and non-ferrous raw materials for turnkey projects across various industries. We provide stainless steel, carbon steel, aluminium, copper, and brass materials essential for infrastructure, fabrication, mechanical, and engineering works. Backed by reliable sourcing from brands like Jindal and Hindalco, our materials meet industry standards for strength, durability, and corrosion resistance. Whether it's structural fabrication, industrial setups, or custom installations, Prabhat Steel ensures timely delivery, concistent quality, and full support for tu roject execution.",
             image: "/trunkey.png",
             icon: (
                 <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@ export default function AboutUs() {
         {
             title: "Facade & Store Fixtures",
             subtitle: "Supply for Facade & Store Fixtures",
-            description: "Prabhat Steel is a leading supplier for façade and mall fixture projects, providing all materials in stainless steel, aluminum, GI, MS, CRCA, along with hardware and electrical components. We assure exceptional service and quality delivery, consistently meeting your company's precise requirements with precision and reliability.",
+            description: "Prabhat Steel, Mumbai, supplies premium ferrous and non-ferrous raw materials for facade systems and store fixture projects. We offer stainless steel, aluminium, carbon steel, and other metals used in cladding, structural framing, display racks, shelving units, and architectural detailing. With materials sourced from trusted brands like Jindal and Hindalco, we ensure excellent surface finish, strength, and corrosion resistance-ideal for high-visibility applications. Whether for retail outlets, commercial spaces, or exterior facade works, Prabhat Steel delivers consister ity and reliable support tailored  needs.",
             image: "/facade.png",
             icon: (
                 <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

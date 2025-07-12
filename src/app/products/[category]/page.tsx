@@ -2068,7 +2068,7 @@ const productData = {
         certifications: ["ISO 9001:2015", "ISO 14001:2015", "ASTM B209", "EN 573-3"],
         industries: ["Aerospace", "Automotive", "Construction", "Electronics", "Packaging", "Marine", "Solar Energy", "Transportation"]
     },
-    'Fasteners & Hardware': {
+    'fasteners-hardware': {
         name: "Fasteners & Hardware",
         title: "Fasteners & Hardware",
         description: "Discover our extensive range of fasteners and hardware, engineered for superior corrosion resistance, strength, and reliability in demanding environments. Ideal for construction, marine, food processing, and industrial applications.",
@@ -2218,7 +2218,7 @@ const productData = {
         certifications: ["ISO 9001:2015", "ASTM A193", "ASTM A194", "DIN 933", "ISO 3506"],
         industries: ["Construction", "Marine", "Automotive", "Food Processing", "Chemical", "Infrastructure", "General Engineering"]
     },
-    'Fittings & Flanges': {
+    'fittings-flanges': {
         name: "Fittings & Flanges",
         title: "Fittings & Flanges",
         description: "Discover our comprehensive range of stainless steel, alloy, and specialty fittings and flanges, engineered for leak-proof connections and reliable performance in piping systems across industries.",
@@ -2873,16 +2873,18 @@ const productData = {
 };
 
 const relatedProducts = {
-    'stainless-steel': ['duplex-steel', 'super-duplex-steel', 'alloy-steel'],
-    'ms-gi-coated': ['stainless-steel', 'carbon-steel', 'aluminium'],
-    'aluminium': ['stainless-steel', 'brass-copper', 'ms-gi-coated'],
-    'duplex-steel': ['super-duplex-steel', 'stainless-steel', 'alloy-steel'],
-    'super-duplex-steel': ['duplex-steel', 'hastelloy', 'alloy-steel'],
-    'alloy-steel': ['stainless-steel', 'hastelloy', 'tool-steel'],
-    'brass-copper': ['aluminium', 'stainless-steel', 'ms-gi-coated'],
-    'carbon-steel': ['ms-gi-coated', 'stainless-steel', 'tool-steel'],
-    'tool-steel': ['alloy-steel', 'carbon-steel', 'stainless-steel'],
-    'hastelloy': ['super-duplex-steel', 'alloy-steel', 'duplex-steel']
+  'stainless-steel': ['duplex-steel', 'super-duplex-steel', 'alloy-steel'],
+  'aluminium': ['stainless-steel', 'brass-copper', 'ms-gi-coated'],
+  'duplex-steel': ['super-duplex-steel', 'stainless-steel', 'alloy-steel'],
+  'super-duplex-steel': ['duplex-steel', 'hastelloy', 'alloy-steel'],
+  'alloy-steel': ['stainless-steel', 'hastelloy', 'tool-steel'],
+  'hastelloy': ['super-duplex-steel', 'alloy-steel', 'duplex-steel'],
+  'brass-copper': ['aluminium', 'stainless-steel', 'ms-gi-coated'],
+  'carbon-steel': ['ms-gi-coated', 'stainless-steel', 'tool-steel'],
+  'tool-steel': ['alloy-steel', 'carbon-steel', 'stainless-steel'],
+  'ms-gi-coated': ['stainless-steel', 'carbon-steel', 'aluminium'],
+  'fasteners-hardware': ['stainless-steel', 'duplex-steel', 'brass-copper'],
+  'fittings-flanges': ['stainless-steel', 'alloy-steel', 'duplex-steel']
 };
 
 // // Related products mapping (same as before)

@@ -25,14 +25,16 @@ const inter = Inter({ subsets: ['latin'] });
 const productCategories = [
   { name: "Stainless Steel", href: "/products/stainless-steel" },
   { name: "Aluminium", href: "/products/aluminium" },
-  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" },
   { name: "Duplex Steel", href: "/products/duplex-steel" },
   { name: "Super Duplex Steel", href: "/products/super-duplex-steel" },
   { name: "Alloy Steel", href: "/products/alloy-steel" },
+  { name: "Hastelloy", href: "/products/hastelloy" },
   { name: "Brass & Copper", href: "/products/brass-copper" },
   { name: "Carbon Steel", href: "/products/carbon-steel" },
   { name: "Tool Steel", href: "/products/tool-steel" },
-  { name: "Hastelloy", href: "/products/hastelloy" }
+  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" },
+  { name: "Fasteners & Hardware", href: "/products/fasteners-hardware" },
+  { name: "Fittings & Flanges", href: "/products/fittings-flanges" }
 ];
 
 export default function RootLayout({

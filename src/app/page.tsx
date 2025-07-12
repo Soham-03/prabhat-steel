@@ -23,78 +23,92 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const products = [
-    {
-      name: "Stainless Steel Products",
-      slug: "stainless-steel",
-      image: "/stainless_steel.jpg",
-      description: "Superior corrosion resistance and durability for demanding applications",
-      features: ["304/316 Grades", "Food Grade", "Corrosion Resistant"]
-    },
-    {
-      name: "Aluminium Products",
-      slug: "aluminium", 
-      image: "/aluminium.jpg",
-      description: "Lightweight yet strong with excellent thermal conductivity",
-      features: ["Lightweight", "Conductive", "Aerospace Grade"]
-    },
-    {
-      name: "MS & GI Coated Products", 
-      slug: "ms-gi-coated",
-      image: "/ms_and_gi.jpg",
-      description: "Cost-effective solutions with excellent strength and coating protection",
-      features: ["Galvanized Coating", "Structural Grade", "Weather Resistant"]
-    },
-    {
-      name: "Duplex Steel Products",
-      slug: "duplex-steel",
-      image: "/duplex-steel.jpg", 
-      description: "Balanced strength and corrosion resistance for demanding environments",
-      features: ["High Strength", "Chloride Resistant", "Stress Corrosion Resistant"]
-    },
-    {
-      name: "Super Duplex Steel Products",
-      slug: "super-duplex-steel",
-      image: "/super-duplex-steel.jpg",
-      description: "Premium performance for the most challenging applications",
-      features: ["Ultra High Strength", "Offshore Grade", "Extreme Corrosion Resistance"]
-    },
-    {
-      name: "Alloy Steel Products",
-      slug: "alloy-steel", 
-      image: "/alloy-steel.webp",
-      description: "Specialized compositions for enhanced mechanical properties",
-      features: ["Heat Resistant", "High Temperature", "Custom Alloys"]
-    },
-    {
-      name: "Brass & Copper Products",
-      slug: "brass-copper",
-      image: "/brass-copper.webp",
-      description: "Excellent conductivity and antimicrobial properties",
-      features: ["Electrical Grade", "Marine Grade", "Antimicrobial"]
-    },
-    {
-      name: "Carbon Steel Products",
-      slug: "carbon-steel",
-      image: "/carbon-steel.jpg", 
-      description: "Versatile and cost-effective for structural applications",
-      features: ["Structural Grade", "Weldable", "High Strength"]
-    },
-    {
-      name: "Tool Steel Products",
-      slug: "tool-steel",
-      image: "/tool-steel.jpg",
-      description: "Precision engineering for cutting tools and dies",
-      features: ["Hardened Grade", "Wear Resistant", "Precision Machined"]
-    },
-    {
-      name: "Hastelloy Products",
-      slug: "hastelloy",
-      image: "/hastealloy.jpg",
-      description: "Superior performance in extreme chemical environments",
-      features: ["Chemical Resistant", "High Temperature", "Aerospace Grade"]
-    }
-  ];
+const products = [
+  {
+    name: "Stainless Steel Products",
+    slug: "stainless-steel",
+    image: "/stainless_steel.jpg",
+    description: "Premium stainless steel products offering exceptional corrosion resistance, durability, and aesthetic appeal for a wide range of applications",
+    features: ["300 & 400 Series", "Food Grade", "Hygienic & Easy to Clean", "100% Recyclable"]
+  },
+  {
+    name: "Aluminium Products",
+    slug: "aluminium", 
+    image: "/aluminium.jpg",
+    description: "High-performance aluminium products combining lightweight properties with excellent corrosion resistance, thermal conductivity, and formability",
+    features: ["Aerospace Grade", "Lightweight", "Excellent Conductivity", "Non-Magnetic Properties"]
+  },
+  {
+    name: "Duplex Steel Products",
+    slug: "duplex-steel",
+    image: "/duplex-steel.jpg", 
+    description: "Advanced duplex steel solutions offering optimal balance of strength, corrosion resistance, and ductility through unique dual-phase microstructure",
+    features: ["Superior Strength", "Chloride Resistant", "Stress Corrosion Resistant", "Cost-Effective"]
+  },
+  {
+    name: "Super Duplex Steel Products",
+    slug: "super-duplex-steel",
+    image: "/super-duplex-steel.jpg",
+    description: "Premium super duplex steel products delivering exceptional corrosion resistance and superior mechanical properties for the most challenging environments",
+    features: ["Ultra High Strength", "Offshore Grade", "Extreme Pitting Resistance", "Extended Service Life"]
+  },
+  {
+    name: "Alloy Steel Products",
+    slug: "alloy-steel", 
+    image: "/alloy-steel.webp",
+    description: "Specialized alloy steel solutions featuring custom compositions engineered for superior strength, heat resistance, and durability in extreme conditions",
+    features: ["High Temperature", "Enhanced Mechanical Properties", "Custom Alloys", "Fatigue Resistant"]
+  },
+  {
+    name: "Hastelloy Products",
+    slug: "hastelloy",
+    image: "/hastealloy.jpg",
+    description: "Premium Hastelloy superalloy products delivering exceptional corrosion resistance and high-temperature strength for demanding chemical processing",
+    features: ["Chemical Resistant", "High Temperature Stability", "Oxidizing & Reducing Environments", "Aerospace Grade"]
+  },
+  {
+    name: "Brass & Copper Products",
+    slug: "brass-copper",
+    image: "/brass-copper.webp",
+    description: "Premium brass and copper products combining excellent thermal and electrical conductivity with corrosion resistance for diverse applications",
+    features: ["Electrical Conductivity", "Marine Grade", "Antimicrobial Properties", "Attractive Appearance"]
+  },
+  {
+    name: "Carbon Steel Products",
+    slug: "carbon-steel",
+    image: "/carbon-steel.jpg", 
+    description: "High-quality carbon steel products delivering exceptional strength, durability, and versatility for structural, mechanical, and general engineering",
+    features: ["High Tensile Strength", "Excellent Weldability", "Cost-Effective", "Heat Treatable"]
+  },
+  {
+    name: "Tool Steel Products",
+    slug: "tool-steel",
+    image: "/tool-steel.jpg",
+    description: "Precision tool steel solutions engineered for superior hardness, wear resistance, and toughness, designed for cutting tools and precision manufacturing",
+    features: ["Exceptional Hardness", "Wear Resistant", "Dimensional Stability", "High Temperature Performance"]
+  },
+  {
+    name: "MS & GI Coated Products", 
+    slug: "ms-gi-coated",
+    image: "/ms_and_gi.jpg",
+    description: "Comprehensive range of mild steel and galvanized iron products providing cost-effective solutions with excellent strength and corrosion protection",
+    features: ["Galvanized Coating", "Structural Grade", "Easy to Fabricate", "Superior Corrosion Protection"]
+  },
+  {
+    name: "Fasteners & Hardware",
+    slug: "fasteners-hardware",
+    image: "/fasteners_hardware.jpg",
+    description: "Extensive range of fasteners and hardware engineered for superior corrosion resistance, strength, and reliability in demanding environments",
+    features: ["High Tensile Strength", "Corrosion Resistant", "Multiple Grades Available", "Custom Manufacturing"]
+  },
+  {
+    name: "Fittings & Flanges",
+    slug: "fittings-flanges",
+    image: "/fittings_flanges.jpg",
+    description: "Comprehensive range of stainless steel, alloy, and specialty fittings and flanges engineered for leak-proof connections and reliable performance",
+    features: ["Leak-Proof Connections", "Multiple Materials", "International Standards", "Custom Fabrication"]
+  }
+];
 
   const heroVariants = {
     hidden: { opacity: 0 },
