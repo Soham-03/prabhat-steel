@@ -463,6 +463,9 @@ const products = [
         </div>
       </motion.section>
 
+
+      {/* Testimonials Section */}
+
       {/* Contact CTA */}
       <motion.section 
         className="py-20 bg-gradient-to-r from-[#FF5912] to-[#FF8C12]"
