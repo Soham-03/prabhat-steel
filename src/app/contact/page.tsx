@@ -182,7 +182,7 @@ export default function Contact() {
                                             </svg>
                                         ),
                                         title: "Phone",
-                                        details: ["+91 8369657425", "+91 8355908724", "+91 7021530230"],
+                                        details: ["8369657425 - varshil jain","8355908724 - varshil jain", "9167029680 - manish jain", "7021530230 - office"],
                                         link: "tel:+918369657425"
                                     },
                                     {
@@ -192,8 +192,8 @@ export default function Contact() {
                                             </svg>
                                         ),
                                         title: "Email",
-                                        details: ["prabhatsteelconnect@gmail.com", "prabhatsteelsales@gmail.com"],
-                                        link: "mailto:prabhatsteelconnect@gmail.com"
+                                        details: ["prabhatsteelsales@gmail.com"],
+                                        link: "mailto:prabhatsteelsales@gmail.com"
                                     },
                                     {
                                         icon: (
@@ -202,7 +202,7 @@ export default function Contact() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                             </svg>
                                         ),
-                                        title: "Location",
+                                        title: "Sales Office",
                                         details: ["202, Panjrapole Road, Near,","Madhav Baug Post Office,", "Mumbai - 400004"],
                                         link: "https://www.google.com/maps/place/Prabhat+Steel/@18.9540711,72.8273083,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce164e1d5b9b:0x3c7d3a21dcfe1c99!8m2!3d18.9540711!4d72.8273083!16s%2Fg%2F1ptybh1cg?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D"
                                     }
@@ -343,7 +343,7 @@ export default function Contact() {
 
                         {/* Map overlay with contact info card */}
                         <div className="absolute bottom-6 left-6 bg-[#0A0A0A]/90 backdrop-blur-sm rounded-2xl p-6 max-w-md border border-[#333333] z-10">
-                            <h3 className="text-xl font-bold mb-3">Mumbai Headquarters</h3>
+                            <h3 className="text-xl font-bold mb-3">Sales Office Address</h3>
                             <p className="text-[#FBF8F3]/70 mb-4">
                                 202, Panjrapole Road, Near<br />
                                 Madhav Baug Post Office,<br />

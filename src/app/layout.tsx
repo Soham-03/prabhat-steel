@@ -25,6 +25,8 @@ const inter = Inter({ subsets: ['latin'] });
 const productCategories = [
   { name: "Stainless Steel", href: "/products/stainless-steel" },
   { name: "Aluminium", href: "/products/aluminium" },
+  { name: "Fasteners & Hardware", href: "/products/fasteners-hardware" },
+  { name: "Fittings & Flanges", href: "/products/fittings-flanges" },
   { name: "Duplex Steel", href: "/products/duplex-steel" },
   { name: "Super Duplex Steel", href: "/products/super-duplex-steel" },
   { name: "Alloy Steel", href: "/products/alloy-steel" },
@@ -32,9 +34,7 @@ const productCategories = [
   { name: "Brass & Copper", href: "/products/brass-copper" },
   { name: "Carbon Steel", href: "/products/carbon-steel" },
   { name: "Tool Steel", href: "/products/tool-steel" },
-  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" },
-  { name: "Fasteners & Hardware", href: "/products/fasteners-hardware" },
-  { name: "Fittings & Flanges", href: "/products/fittings-flanges" }
+  { name: "MS & GI Coated Products", href: "/products/ms-gi-coated" }
 ];
 
 export default function RootLayout({
@@ -106,13 +106,13 @@ export default function RootLayout({
               <svg className="w-4 h-4 text-[#FF5912]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
-              <span className="text-sm text-[#FBF8F3]/80">prabhatsteelconnect@gmail.com</span>
+              <span className="text-sm text-[#FBF8F3]/80"> prabhatsteelsales@gmail.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <svg className="w-4 h-4 text-[#FF5912]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
               </svg>
-              <span className="text-sm text-[#FBF8F3]/80">+91 ‭7021530230‬</span>
+              <span className="text-sm text-[#FBF8F3]/80">+91 ‭8369657425‬</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -387,13 +387,13 @@ export default function RootLayout({
                             <svg className="w-5 h-5 text-[#FF5912]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span className="text-[#FBF8F3]/80">prabhatsteelconnect@gmail.com</span>
+                            <span className="text-[#FBF8F3]/80">prabhatsteelsales@gmail.com</span>
                           </div>
                           <div className="flex items-center space-x-3">
                             <svg className="w-5 h-5 text-[#FF5912]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
-                            <span className="text-[#FBF8F3]/80">+91 ‭7021530230‬</span>
+                            <span className="text-[#FBF8F3]/80">+91 ‭8369657425‬</span>
                           </div>
                         </div>
                       </div>
@@ -499,13 +499,13 @@ export default function RootLayout({
                     <svg className="w-5 h-5 text-[#FF5912] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                     </svg>
-                    <span className="text-[#FBF8F3]/70">+91 ‭7021530230‬</span>
+                    <span className="text-[#FBF8F3]/70">+91 ‭8369657425‬</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-[#FF5912] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
-                    <span className="text-[#FBF8F3]/70">prabhatsteelconnect@gmail.com</span>
+                    <span className="text-[#FBF8F3]/70">prabhatsteelsales@gmail.com</span>
                   </li>
                 </ul>
                 {/* <div className="mt-6">

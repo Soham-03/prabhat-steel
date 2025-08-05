@@ -1639,7 +1639,7 @@ const productData = {
         product_range: [
             {
                 name: "Sheets",
-                description: "Prabhat Steel supplies a comprehensive range of stainless steel sheets in 300 and 400 series, ideal for fabrication, construction, industrial, and architectural use. These sheets are valued for their corrosion resistance, strength, and clean surface finish, and are available in various thicknesses and custom sizes.",
+                description: "High-quality Stainless Steel Sheets in the 300 and 400 series are available, well-suited for fabrication, construction, industrial, and architectural applications. These sheets are appreciated for their corrosion resistance, strength, and smooth surface finish, making them a reliable choice for a wide range of projects. Offered in various thicknesses and customizable sizes, they provide both functionality and consistency to meet specific application needs.",
                 Grades: [
                     "300 Series: SS 304, SS 304L, SS 316, SS 316L, SS 321",
                     "400 Series: SS 409, SS 410, SS 420, SS 430",
@@ -1665,7 +1665,7 @@ const productData = {
             },
             {
                 name: "Plates",
-                description: "Prabhat Steel offers a wide range of stainless steel plates in 200, 300 and 400 series, suitable for heavy-duty fabrication, pressure vessels, construction, and industrial applications. Our plates are recognized for their superior corrosion resistance, strength, and uniform thickness, and are available in standard and custom sizes to meet diverse project requirements.",
+                description: "A wide selection of Stainless Steel Plates in the 200, 300, and 400 series is available, perfectly suited for heavy-duty fabrication, pressure vessels, construction, and other industrial applications. These plates are known for their superior corrosion resistance, high strength, and consistent thickness, ensuring reliable performance across varied environments. Offered in both standard and custom sizes, they are designed to meet diverse project requirements with precision and durability.",
                 Grades: [
                     "300 Series: SS 304, SS 304L, SS 316, SS 316L, SS 321",
                     "400 Series: SS 409, SS 410, SS 420, SS 430",
@@ -1691,7 +1691,7 @@ const productData = {
             },
             {
                 name: "Shim Sheets",
-                description: "Prabhat Steel offers precision-quality **Stainless Steel Shim Sheets** in 300 series grades, widely used for high-accuracy applications across industries such as automotive, aerospace, chemical, electronics, and tooling. These shim sheets are known for their **exceptional corrosion resistance, high strength-to-weight ratio, and ease of fabrication**. Ideal for alignment, spacing, adjustment, and sealing in precision assemblies, our shim sheets are available in a wide range of thicknesses—from microns to millimeters—with tight tolerances",
+                description: "Precision-quality stainless steel shim sheets in 300 series grades are available for high-accuracy applications across industries such as automotive, aerospace, chemical, electronics, and tooling. These sheets offer reliable corrosion resistance, a strong strength-to-weight ratio, and ease of fabrication. Commonly used for alignment, spacing, adjustment, and sealing in precision assemblies, they are offered in a wide range of thicknesses — from microns to millimeters — with tight tolerances to meet specific project requirements.",
                 Grades: [
                     "300 Series:* SS 304, SS 304L, SS 316, SS 316L, SS 321"
                 ],
@@ -1711,7 +1711,7 @@ const productData = {
             },
             {
                 name: "Pipes & Tubes",
-                description: "Prabhat Steel offers a wide range of Stainless Steel Pipes in both ERW (Electric Resistance Welded) and Seamless (SMLS) types, manufactured using high-grade 300 and 400 series stainless steel. These pipes are widely used in industries such as petrochemicals, food processing, pharmaceuticals, construction, and fluid transport. Designed for durability, corrosion resistance, and high-pressure performance, our SS pipes are available in various schedules and diameters to meet diverse project requirements.",
+                description: "A wide range of stainless steel pipes is available in both ERW (Electric Resistance Welded) and Seamless (SMLS) types, manufactured from high-quality 300 and 400 series stainless steel. These pipes are commonly used in industries such as petrochemicals, food processing, pharmaceuticals, construction, and fluid transport. Known for their durability, corrosion resistance, and ability to perform under high-pressure conditions, they are offered in various schedules and diameters to suit different application requirements.",
                 Grades: [
                     "300 Series: SS 304, SS 304L, SS 316, SS 316L, SS 321",
                     "400 Series: SS 409, SS 410, SS 430"
@@ -1733,7 +1733,7 @@ const productData = {
             },
             {
                 name: "Rods & Bars",
-                description: "At Prabhat Steel, we supply top-grade Stainless Steel Round Bars in the versatile 300 and 400 series—engineered to meet the demanding needs of industries across fabrication, construction, machining, and precision engineering. These bars are valued for their exceptional strength, corrosion resistance, and excellent surface finish, making them ideal for critical components and structural use. Available in a wide range of diameters and custom lengths, our SS round bars ensure both reliability and performance in every application.",
+                description: "Stainless steel round bars in 300 and 400 series are suitable for a wide range of applications across fabrication, construction, machining, and precision engineering. These bars offer a good balance of strength, corrosion resistance, and surface finish, making them ideal for both structural and component-based uses. The 300 series is known for its formability and resistance to corrosive environments, while the 400 series provides greater hardness and magnetic properties. Available in various diameters and custom lengths, they are manufactured to meet industry standards for reliability and performance.",
                 Grades: [
                     "300 Series: SS 304, SS 304L, SS 316, SS 316L, SS 321",
                     "400 Series: SS 410, SS 416, SS 420, SS 430",

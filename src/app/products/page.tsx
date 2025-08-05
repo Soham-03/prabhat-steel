@@ -91,6 +91,22 @@ const productCategories = [
     features: ["Exceptional strength-to-weight ratio", "Superior corrosion resistance", "Excellent thermal and electrical conductivity", "100% recyclable and sustainable"]
   },
   {
+    id: "fasteners-hardware",
+    name: "Fasteners & Hardware",
+    image: "/fasteners_hardware.jpg",
+    description: "Extensive range of fasteners and hardware engineered for superior corrosion resistance, strength, and reliability in demanding environments.",
+    popular: ["Hex Bolts & Nuts", "Socket Head Cap Screws", "Machine Screws & Wood Screws", "Washers & Anchors", "Custom Fasteners & Hardware Accessories"],
+    features: ["Superior corrosion resistance in harsh environments", "High tensile and shear strength", "Wide range of sizes and thread types", "Non-magnetic and hygienic options", "Custom manufacturing available"]
+  },
+  {
+    id: "fittings-flanges",
+    name: "Fittings & Flanges",
+    image: "/fittings_flanges.jpg",
+    description: "Comprehensive range of stainless steel, alloy, and specialty fittings and flanges engineered for leak-proof connections and reliable performance.",
+    popular: ["Buttweld Fittings", "Forged Fittings", "Weld Neck Flanges", "Slip-On Flanges", "Blind Flanges", "Custom Fittings & Flanges"],
+    features: ["Leak-proof and high-strength connections", "Wide range of sizes and pressure ratings", "Manufactured to international standards (ASME, DIN, JIS)", "Available in multiple materials", "Custom fabrication available"]
+  },
+  {
     id: "duplex-steel",
     name: "Duplex Steel",
     image: "/duplex-steel.jpg",
@@ -153,22 +169,6 @@ const productCategories = [
     description: "Comprehensive range of mild steel and galvanized iron products providing cost-effective solutions with excellent strength and corrosion protection.",
     popular: ["MS Sheets & Plates", "GI Sheets & Coils", "MS Pipes & Tubes", "GI Pipes & Fittings", "MS & GI Fasteners", "MS Angles & Channels"],
     features: ["Cost-effective material solutions", "Excellent strength and durability", "Superior corrosion protection (GI coating)", "Easy to fabricate and weld"]
-  },
-  {
-    id: "fasteners-hardware",
-    name: "Fasteners & Hardware",
-    image: "/fasteners_hardware.jpg",
-    description: "Extensive range of fasteners and hardware engineered for superior corrosion resistance, strength, and reliability in demanding environments.",
-    popular: ["Hex Bolts & Nuts", "Socket Head Cap Screws", "Machine Screws & Wood Screws", "Washers & Anchors", "Custom Fasteners & Hardware Accessories"],
-    features: ["Superior corrosion resistance in harsh environments", "High tensile and shear strength", "Wide range of sizes and thread types", "Non-magnetic and hygienic options", "Custom manufacturing available"]
-  },
-  {
-    id: "fittings-flanges",
-    name: "Fittings & Flanges",
-    image: "/fittings_flanges.jpg",
-    description: "Comprehensive range of stainless steel, alloy, and specialty fittings and flanges engineered for leak-proof connections and reliable performance.",
-    popular: ["Buttweld Fittings", "Forged Fittings", "Weld Neck Flanges", "Slip-On Flanges", "Blind Flanges", "Custom Fittings & Flanges"],
-    features: ["Leak-proof and high-strength connections", "Wide range of sizes and pressure ratings", "Manufactured to international standards (ASME, DIN, JIS)", "Available in multiple materials", "Custom fabrication available"]
   }
 ];
 // Industries served

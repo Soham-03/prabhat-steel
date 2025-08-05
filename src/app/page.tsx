@@ -39,6 +39,20 @@ const products = [
     features: ["Aerospace Grade", "Lightweight", "Excellent Conductivity", "Non-Magnetic Properties"]
   },
   {
+    name: "Fasteners & Hardware",
+    slug: "fasteners-hardware",
+    image: "/fasteners_hardware.jpg",
+    description: "Extensive range of fasteners and hardware engineered for superior corrosion resistance, strength, and reliability in demanding environments",
+    features: ["High Tensile Strength", "Corrosion Resistant", "Multiple Grades Available", "Custom Manufacturing"]
+  },
+  {
+    name: "Fittings & Flanges",
+    slug: "fittings-flanges",
+    image: "/fittings_flanges.jpg",
+    description: "Comprehensive range of stainless steel, alloy, and specialty fittings and flanges engineered for leak-proof connections and reliable performance",
+    features: ["Leak-Proof Connections", "Multiple Materials", "International Standards", "Custom Fabrication"]
+  },
+  {
     name: "Duplex Steel Products",
     slug: "duplex-steel",
     image: "/duplex-steel.jpg", 
@@ -93,20 +107,6 @@ const products = [
     image: "/ms_and_gi.jpg",
     description: "Comprehensive range of mild steel and galvanized iron products providing cost-effective solutions with excellent strength and corrosion protection",
     features: ["Galvanized Coating", "Structural Grade", "Easy to Fabricate", "Superior Corrosion Protection"]
-  },
-  {
-    name: "Fasteners & Hardware",
-    slug: "fasteners-hardware",
-    image: "/fasteners_hardware.jpg",
-    description: "Extensive range of fasteners and hardware engineered for superior corrosion resistance, strength, and reliability in demanding environments",
-    features: ["High Tensile Strength", "Corrosion Resistant", "Multiple Grades Available", "Custom Manufacturing"]
-  },
-  {
-    name: "Fittings & Flanges",
-    slug: "fittings-flanges",
-    image: "/fittings_flanges.jpg",
-    description: "Comprehensive range of stainless steel, alloy, and specialty fittings and flanges engineered for leak-proof connections and reliable performance",
-    features: ["Leak-Proof Connections", "Multiple Materials", "International Standards", "Custom Fabrication"]
   }
 ];
 
