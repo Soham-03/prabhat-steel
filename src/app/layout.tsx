@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -407,6 +408,7 @@ export default function RootLayout({
 
         {/* Main Content */}
         {children}
+        <Analytics/>
 
         {/* Footer */}
         <footer className="bg-[#0A0A0A] text-white">
